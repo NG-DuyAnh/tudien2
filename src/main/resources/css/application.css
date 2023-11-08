@@ -1,0 +1,86 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #e6e6e6, #e0e0e0);
+    /*-fx-background-color: linear-gradient(to bottom right, #752e65, #44008b);*/
+    -button-color: #747f8d;
+    -hover-button-color: #2e3338;
+
+    -purple-color: #5865F2;
+    -hover-purple-color: #4752C4;
+
+    -text-color: #555c5d;
+    -hover-text-color: #2e3338;
+
+    -gray-color: #e6e6e6;
+    -title-color: #060607;
+    -hover-background-color: #D4D7DC;
+}
+/*#sidebar{*/
+/*    -fx-background-color: #ffffff;*/
+/*}*/
+
+
+/*.container{*/
+/*    -fx-background-color: #a7a7a7;*/
+/*    -fx-background-radius: 5;*/
+/*    -fx-border-radius: 5;*/
+/*}*/
+
+
+.button-favicon {
+    -fx-graphic: url('../Icon/book.jpg');
+}
+.button-favicon:hover {
+    -fx-background-color: none;
+    -fx-text-fill: -text-color;
+    -fx-font-size: 20;
+    -fx-cursor: default;
+}
+.button {
+    -fx-background-color: none;
+    -fx-text-fill: -text-color;
+    -fx-font-size: 15;
+}
+
+.button:hover {
+    -fx-background-color: -hover-background-color;
+    -fx-text-fill: -hover-text-color;
+    -fx-cursor: hand;
+}
+
+.button.active {
+    -fx-background-color: -hover-background-color;
+    -fx-text-fill: -hover-text-color;
+    -fx-cursor: hand;
+}
+.button-search {
+    -fx-graphic: url('../Icon/search.png');
+}
+.button-search:hover {
+    -fx-graphic: url('../Icon/search.png');
+}
+.button-search.active {
+    -fx-graphic: url('../Icon/search.png');
+}
+.button-translate {
+    -fx-graphic: url('../Icon/translate.png');
+}
+
+.button-translate:hover {
+    -fx-graphic: url('../Icon/translate.png');
+}
+
+.button-translate.active {
+    -fx-graphic: url('../Icon/translate.png');
+}
+
+.button-Game {
+    -fx-graphic: url('../Icon/Game.png');
+}
+
+.button-Game:hover {
+    -fx-graphic: url('../Icon/Game.png');
+}
+
+.button-Game.active {
+    -fx-graphic: url('../Icon/Game.png');
+}

@@ -1,0 +1,100 @@
+1, What is the synonym for 'happy'?, a. Sad, b. Joyful, c. Angry, d. Fearful, b
+2, Which word means the opposite of 'begin'?, a. Start, b. Conclude, c. Finish, d. Continue, b
+3, What is the plural form of 'child'?, a. Childs, b. Childrens, c. Childes, d. Children, d
+4, What is a group of sheep called?, a. Herd, b. Swarm, c. Flock, d. School, c
+5, Which word is a synonym for 'beautiful'?, a. Ugly, b. Pretty, c. Dirty, d. Nasty, b
+6, What is the opposite of 'victory'?, a. Success, b. Win, c. Defeat, d. Achievement, c
+7, Which word means 'a person who studies plants'?, a. Zoologist, b. Geologist, c. Botanist, d. Biologist, c
+8, What is the past tense of 'sing'?, a. Sings, b. Sanged, c. Sang, d. Singed, c
+9, Which word describes a fear of spiders?, a. Arachnophobia, b. Acrophobia, c. Hydrophobia, d. Claustrophobia, a
+10, What is the plural of 'mouse' (the computer device)?, a. Mouses, b. Mice, c. Mousies, d. Micees, b
+11, Which word means 'a person who travels to explore unknown places'?, a. Tourist, b. Traveler, c. Explorer, d. Nomad, c
+12, What is the synonym for 'angry'?, a. Happy, b. Upset, c. Furious, d. Relaxed, c
+13, Which word means 'the study of the Earth's physical structure'?, a. Biology, b. Geography, c. Chemistry, d. History, b
+14, What is the opposite of 'early'?, a. Late, b. Soon, c. Prompt, d. Quick, a
+15, Which word means 'a person who writes books'?, a. Reader, b. Author, c. Publisher, d. Critic, b
+16, What is the plural form of 'man'?, a. Mans, b. Mens, c. Manses, d. Men, d
+17, What is the synonym for 'brave'?, a. Scared, b. Fearless, c. Cowardly, d. Timid, b
+18, Which word means 'a very large body of water'?, a. Lake, b. River, c. Ocean, d. Stream, c
+19, What is the opposite of 'closed'?, a. Locked, b. Shut, c. Open, d. Blocked, c
+20, Which word means 'a person who repairs electrical appliances'?, a. Mechanic, b. Plumber, c. Electrician, d. Carpenter, c
+21, What is the past tense of 'run'?, a. Running, b. Ran, c. Runs, d. Rins, b
+22, What is the synonym for 'generous'?, a. Stingy, b. Greedy, c. Selfish, d. Kind, d
+23, Which word means 'the study of celestial bodies'?, a. Astronomy, b. Geology, c. Psychology, d. Sociology, a
+24, What is the plural of 'tooth'?, a. Teeths, b. Toothes, c. Teeth, d. Toothies, c
+25, What is the opposite of 'clean'?, a. Dirty, b. Neat, c. Tidy, d. Spotless, a
+26, Which word means 'a person who designs buildings'?, a. Architect, b. Engineer, c. Builder, d. Plumber, a
+27, What is the synonym for 'excited'?, a. Bored, b. Enthusiastic, c. Calm, d. Relaxed, b
+28, What is the past tense of 'write'?, a. Writes, b. Written, c. Writed, d. Wrote, d
+29, Which word describes a fear of heights?, a. Acrophobia, b. Arachnophobia, c. Claustrophobia, d. Hydrophobia, a
+30, What is the plural of 'child'?, a. Childs, b. Childrens, c. Childes, d. Children, d
+31, What is the synonym for 'sad'?, a. Happy, b. Joyful, c. Miserable, d. Cheerful, c
+32, Which word means 'a person who studies rocks'?, a. Biologist, b. Geologist, c. Zoologist, d. Chemist, b
+33, What is the opposite of 'arrive'?, a. Leave, b. Stay, c. Depart, d. Reach, a
+34, Which word means 'a person who composes music'?, a. Singer, b. Musician, c. Composer, d. Conductor, c
+35, What is the plural form of 'goose'?, a. Gooses, b. Geese, c. Goose, d. Gooes, b
+36, What is the synonym for 'clever'?, a. Stupid, b. Smart, c. Dull, d. Slow, b
+37, Which word means 'a person who studies insects'?, a. Biologist, b. Entomologist, c. Ornithologist, d. Zoologist, b
+38, What is the past tense of 'swim'?, a. Swam, b. Swimmed, c. Swum, d. Swimming, a
+39, What is the opposite of 'strong'?, a. Powerful, b. Weak, c. Mighty, d. Sturdy, b
+40, Which word means 'a person who solves crimes'?, a. Detective, b. Criminal, c. Lawyer, d. Judge, a
+41, What is the synonym for 'tiny'?, a. Enormous, b. Small, c. Huge, d. Massive, b
+42, Which word means 'a person who studies birds'?, a. Zoologist, b. Botanist, c. Geologist, d. Ornithologist, d
+43, What is the plural of 'leaf'?, a. Leafs, b. Leaves, c. Leafes, d. Leafies, b
+44, What is the opposite of 'fast'?, a. Slow, b. Quick, c. Speedy, d. Rapid, a
+45, Which word means 'a person who practices law'?, a. Judge, b. Attorney, c. Client, d. Defendant, b
+46, What is the synonym for 'fearless'?, a. Brave, b. Scared, c. Timid, d. Cowardly, a
+47, Which word means 'the study of ancient civilizations'?, a. Archaeology, b. Psychology, c. Geology, d. Sociology, a
+48, What is the past tense of 'give'?, a. Gave, b. Given, c. Gived, d. Giving, a
+49, What is the opposite of 'light' (not heavy)?, a. Heavy, b. Weighty, c. Massive, d. Dense, a
+50, Which word means 'a person who flies aircraft'?, a. Pilot, b. Captain, c. Stewardess, d. Navigator, a
+51, What is the synonym for 'peaceful'?, a. Chaotic, b. Serene, c. Noisy, d. Violent, b
+52, Which word means 'a person who studies the mind and behavior'?, a. Biologist, b. Psychologist, c. Sociologist, d. Economist, b
+53, What is the plural form of 'moose'?, a. Mooses, b. Mice, c. Moose, d. Meese, c
+54, What is the opposite of 'empty'?, a. Full, b. Hollow, c. Vacant, d. Spacious, a
+55, Which word means 'a person who practices medicine'?, a. Scientist, b. Doctor, c. Patient, d. Nurse, b
+56, What is the synonym for 'wise'?, a. Foolish, b. Clever, c. Smart, d. Intelligent, d
+57, Which word means 'a person who studies the Earth's history'?, a. Historian, b. Geologist, c. Biologist, d. Anthropologist, b
+58, What is the past tense of 'break'?, a. Broken, b. Breaking, c. Broke, d. Breaked, c
+59, What is the opposite of 'noisy'?, a. Quiet, b. Loud, c. Silent, d. Boisterous, a
+60, Which word means 'a person who writes for newspapers or magazines'?, a. Editor, b. Journalist, c. Reporter, d. Author, b
+61, What is the synonym for 'tired'?, a. Energetic, b. Exhausted, c. Active, d. Lively, b
+62, Which word means 'a person who studies earthquakes'?, a. Astronomer, b. Biologist, c. Geologist, d. Seismologist, d
+63, What is the plural form of 'cactus'?, a. Cactuses, b. Cacti, c. Cactu, d. Cactooses, b
+64, What is the opposite of 'soft'?, a. Hard, b. Smooth, c. Gentle, d. Delicate, a
+65, Which word means 'a person who paints pictures'?, a. Artist, b. Sculptor, c. Composer, d. Poet, a
+66, What is the synonym for 'famous'?, a. Obscure, b. Popular, c. Unknown, d. Notorious, b
+67, Which word means 'a person who studies the weather'?, a. Meteorologist, b. Astronomer, c. Geologist, d. Biologist, a
+68, What is the past tense of 'drive'?, a. Drove, b. Drived, c. Driven, d. Driving, a
+69, What is the opposite of 'wet'?, a. Dry, b. Damp, c. Moist, d. Soaked, a
+70, Which word means 'a person who prepares and serves food'?, a. Chef, b. Waiter, c. Diner, d. Hostess, a
+71, What is the synonym for 'brilliant'?, a. Dull, b. Clever, c. Stupid, d. Shiny, b
+72, Which word means 'a person who studies the universe and stars'?, a. Astronomer, b. Geologist, c. Biologist, d. Anthropologist, a
+73, What is the plural form of 'deer'?, a. Deers, b. Dees, c. Deer, d. Deeses, c
+74, What is the opposite of 'shallow'?, a. Deep, b. Superficial, c. Shallowy, d. Surface, a
+75, Which word means 'a person who repairs water pipes'?, a. Electrician, b. Mechanic, c. Plumber, d. Carpenter, c
+76, What is the synonym for 'courageous'?, a. Scared, b. Fearful, c. Brave, d. Timid, c
+77, Which word means 'a person who studies ancient artifacts'?, a. Archaeologist, b. Biologist, c. Geologist, d. Anthropologist, a
+78, What is the past tense of 'eat'?, a. Ate, b. Eaten, c. Eated, d. Eating, a
+79, What is the opposite of 'ugly'?, a. Beautiful, b. Pretty, c. Attractive, d. Lovely, a
+80, Which word means 'a person who plays musical instruments'?, a. Singer, b. Composer, c. Musician, d. Conductor, c
+81, What is the synonym for 'hungry'?, a. Full, b. Starving, c. Satisfied, d. Content, b
+82, Which word means 'a person who studies the structure of the Earth'?, a. Geologist, b. Biologist, c. Astronomer, d. Chemist, a
+83, What is the plural form of 'foot'?, a. Foots, b. Feet, c. Footies, d. Feets, b
+84, What is the opposite of 'happy'?, a. Sad, b. Joyful, c. Cheerful, d. Delighted, a
+85, Which word means 'a person who writes novels'?, a. Author, b. Editor, c. Critic, d. Poet, a
+86, What is the synonym for 'cunning'?, a. Dull, b. Sly, c. Wise, d. Stupid, b
+87, Which word means 'a person who studies the origin of words'?, a. Biologist, b. Geologist, c. Philanthropist, d. Etymologist, d
+88, What is the past tense of 'begin'?, a. Begins, b. Began, c. Begun, d. Beginning, b
+89, What is the opposite of 'old'?, a. Elderly, b. Ancient, c. Young, d. Aged, c
+90, Which word means 'a person who practices dentistry'?, a. Dentist, b. Doctor, c. Nurse, d. Surgeon, a
+91, What is the synonym for 'wealthy'?, a. Poor, b. Rich, c. Prosperous, d. Affluent, b
+92, Which word means 'a person who studies the development of societies'?, a. Geologist, b. Biologist, c. Sociologist, d. Historian, c
+93, What is the plural form of 'mouse' (the rodent)?, a. Mouses, b. Mice, c. Mousies, d. Micees, b
+94, What is the opposite of 'wide'?, a. Narrow, b. Broad, c. Extensive, d. Vast, a
+95, Which word means 'a person who writes for the theater'?, a. Author, b. Actor, c. Playwright, d. Director, c
+96, What is the synonym for 'diligent'?, a. Lazy, b. Hardworking, c. Unmotivated, d. Idle, b
+97, Which word means 'a person who studies the Earth's ecosystems'?, a. Biologist, b. Geologist, c. Ecologist, d. Environmentalist, c
+98, What is the past tense of 'find'?, a. Finded, b. Found, c. Founded, d. Finding, b
+99, What is the opposite of 'beautiful'?, a. Ugly, b. Attractive, c. Pretty, d. Handsome, a
+100, Which word means 'a person who studies ancient societies'?, a. Archaeologist, b. Geologist, c. Historian, d. Philosopher, a
