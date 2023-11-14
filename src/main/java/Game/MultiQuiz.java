@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MultiQuiz {
+public class
+
+
+
+MultiQuiz {
 
     public void gameFromFile(String filepath) {
         try {

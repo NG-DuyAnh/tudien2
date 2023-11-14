@@ -16,14 +16,14 @@
                </styleClass>
             </Button>
 
-            <Button fx:id="translateButton" mnemonicParsing="false" prefHeight="90.0" prefWidth="137.0" text="dịch nghĩa">
+            <Button fx:id="translateButton" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="90.0" prefWidth="137.0" text="dịch nghĩa">
                <styleClass>
                   <String fx:value="button-translate" />
                   <String fx:value="text-navi-bar" />
                </styleClass></Button>
 
 
-            <Button fx:id="gameButton" mnemonicParsing="false" prefHeight="95.0" prefWidth="139.0" text="game">
+            <Button fx:id="gameButton" mnemonicParsing="false" onAction="#showGamePane" prefHeight="95.0" prefWidth="139.0" text="game">
                <styleClass>
                   <String fx:value="button-Game" />
                   <String fx:value="text-navi-bar" />

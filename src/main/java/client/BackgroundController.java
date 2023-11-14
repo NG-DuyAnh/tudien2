@@ -20,10 +20,16 @@ public class BackgroundController implements Initializable {
     private AnchorPane searchPane;
     @FXML
     private AnchorPane translatePane;
-
-
     @FXML
+    private AnchorPane hangmanPane;
+
+
+
+    // tọa tối tượng class để còn sử dụng và liên kêt .............
+
     private SearchController searchController;
+    private TranslateController translateController;
+    private HangmanController hangmanController;
 
 
 
@@ -50,8 +56,11 @@ public class BackgroundController implements Initializable {
     public void resetStyleNav() {
         SearchButton.getStyleClass().removeAll("active");
         translateButton.getStyleClass().removeAll("active");
-
+        gameButton.getStyleClass().removeAll("active");
     }
+
+
+
 
     @FXML
     public void showSearchPane() {
@@ -61,7 +70,32 @@ public class BackgroundController implements Initializable {
         setMainContent(searchPane);
     }
 
+    @FXML
+    public void showTranslatePane() {
+        resetStyleNav();   //xóa đậm tất cả button
+        translateButton.getStyleClass().add("active"); // giữ button đậm
+        translateController.initSearchListView(); //reset lại pane khi quay trở lại
+        setMainContent(translatePane);
+    }
+    public void showGamePane() {
+        resetStyleNav();   //xóa đậm tất cả button
+        gameButton.getStyleClass().add("active"); // giữ button đậm
+        //translateButton.initSearchListView(); //reset lại pane khi quay trở lại
+        setMainContent(hangmanPane);
+    }
+
+
+
+
+
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dictionary/Translate.fxml"));
+            translatePane = loader.load();
+            translateController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/dictionary/Search.fxml"));
             searchPane = loader.load();
@@ -69,8 +103,15 @@ public class BackgroundController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dictionary/Hangman.fxml"));
+            hangmanPane = loader.load();
+            hangmanController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-//        searchButton.getStyleClass().add("active");
+        SearchButton.getStyleClass().add("active");
         mainContent.getChildren().setAll(searchPane);
     }
 

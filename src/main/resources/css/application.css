@@ -35,6 +35,8 @@
     -fx-font-size: 20;
     -fx-cursor: default;
 }
+
+
 .button {
     -fx-background-color: none;
     -fx-text-fill: -text-color;
@@ -52,6 +54,9 @@
     -fx-text-fill: -hover-text-color;
     -fx-cursor: hand;
 }
+
+
+
 .button-search {
     -fx-graphic: url('../Icon/search.png');
 }
@@ -61,10 +66,11 @@
 .button-search.active {
     -fx-graphic: url('../Icon/search.png');
 }
+
+
 .button-translate {
     -fx-graphic: url('../Icon/translate.png');
 }
-
 .button-translate:hover {
     -fx-graphic: url('../Icon/translate.png');
 }
@@ -72,6 +78,8 @@
 .button-translate.active {
     -fx-graphic: url('../Icon/translate.png');
 }
+
+
 
 .button-Game {
     -fx-graphic: url('../Icon/Game.png');

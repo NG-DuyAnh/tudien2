@@ -1,0 +1,33 @@
+.first-color {
+    -fx-background-color: white;
+}
+
+.second-color {
+    -fx-background-color: #f2f3f5;
+}
+
+.third-color {
+    -fx-background-color: #e3e5e8;
+}
+
+
+.forth-color {
+    -fx-background-color: #1E2529;
+}
+
+
+/* lỡ rồi */
+.padding-pane {
+    -fx-background-radius: 10 0 0 10; /* Đặt bán kính của góc (trên bên trái) */
+}
+
+.rounded-pane {
+    -fx-background-radius: 10; /* Đặt bán kính của góc */
+}
+
+.top-right-rounded-pane {
+    -fx-background-radius: 0 10 0 0; /* Đặt bán kính của góc (trên bên trái) */
+}
+
+
+

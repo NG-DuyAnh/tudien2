@@ -29,8 +29,7 @@ public void showDefinitionInWebView() {
 
     public void initSearchListView() {
         listView.getItems().clear();
-        
+        searchBar.clear();
+        definitionView.getEngine().loadContent("");
     }
-
-
 }
