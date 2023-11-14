@@ -11,9 +11,11 @@ public class Hangman {
     private String[] letters;
 
 
-    public Hangman() throws FileNotFoundException {
+    public Hangman(String difficulty) throws FileNotFoundException {
+
         words = new ArrayList<>();
-        Scanner sc = new Scanner(new File("C:\\Users\\Admin\\Downloads\\Hangman-main\\Hangman-main\\Words.txt"));
+        words.clear();
+        Scanner sc = new Scanner(new File("F:\\Dictionary\\src\\main\\resources\\DB\\Hangman_" + difficulty + ".txt"));
         while(sc.hasNextLine()) words.add(sc.nextLine());
     }
 

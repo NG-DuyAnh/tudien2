@@ -4,6 +4,8 @@ import Game.Hangman;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
@@ -16,6 +18,9 @@ import java.util.List;
 
 public class HangmanController {
 
+
+
+    // !nhân vật người treo cổ
     @FXML
     private Rectangle Box;
 
@@ -37,30 +42,45 @@ public class HangmanController {
     @FXML
     private Line rope;
 
-
+    // !từ đã đoán được và các nút để đoán
     @FXML
     private Text currText;
 
     @FXML
     private FlowPane alphabet;
 
+
+    // !số lượng lần đoán đúng và sai
     private int mistakes;
     private int correct;
 
-
+    // !chơi xong 1 lượt
     @FXML
     private Text correctAnswear;
     @FXML
     private Text status;
 
 
+    // !độ khó trò chơi
+    @FXML
+    private MenuButton difficultyButton;
+
+    @FXML
+    private MenuItem easy;
+
+    @FXML
+    private MenuItem hard;
+
+    private Hangman words;
+    private boolean hintUsed = false;
+
     // TODO: KO RO VI SAO LAI CAN exception
-    private Hangman words = new Hangman();
+
     public HangmanController() throws FileNotFoundException {
     }
     // ?   _____
 
-
+    // từ và đáp án
     private String myWord;
     private List<String> myLetters;
     private List<String> answer;
@@ -76,8 +96,18 @@ public class HangmanController {
         human.setVisible(false);
         rope.setVisible(false);
 
+
         mistakes=0;
         correct=0;
+        String difficulty = "easy"; // default to easy
+        if (difficultyButton.getText().equals("hard")) {
+            difficulty = "hard";
+        }
+        try {
+            words = new Hangman(difficulty);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace(); // Handle the exception appropriately
+        }
         myWord = words.getRandomWord();
         myLetters = Arrays.asList(myWord.split(""));
         answer = Arrays.asList(new String[myLetters.size()*2]);
@@ -93,6 +123,24 @@ public class HangmanController {
         status.setText("");
         correctAnswear.setText("");
         alphabet.setDisable(false);
+        hintUsed = false;
+    }
+
+    @FXML
+    public void selectDifficulty(ActionEvent event) {
+
+        MenuItem selectedDifficulty = (MenuItem) event.getSource();
+        difficultyButton.setText(selectedDifficulty.getText());
+
+        String difficulty = selectedDifficulty.getId(); // Assuming you set the id for menu items as the difficulty level
+
+
+        try {
+            words = new Hangman(difficulty);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace(); // Handle the exception appropriately
+        }
+        newGame();
     }
 
 
@@ -126,7 +174,9 @@ public class HangmanController {
 //            }
 //        }
 //    }
-//
+
+
+
     public void newGame(){
         for(int i=0; i<26; i++){
             alphabet.getChildren().get(i).setDisable(false);
@@ -134,70 +184,16 @@ public class HangmanController {
         hintUsed = false;
         initialize();
     }
-//
-//    public void hint(ActionEvent event) {
-//        if (mistakes < 7) {
-//            int hiddenIndex = -1;
-//
-//            // Find the first hidden letter
-//            for (int i = 0; i < answer.size(); i += 2) {
-//                if (answer.get(i).equals("_")) {
-//                    hiddenIndex = i;
-//                    break;
-//                }
-//            }
-//
-//            // If there is a hidden letter, reveal it
-//            if (hiddenIndex != -1) {
-//                answer.set(hiddenIndex, myLetters.get(hiddenIndex / 2));
-//                String res = String.join("", answer);
-//                currText.setText(res);
-//            } else {
-//                // If no hidden letter is found, do nothing (you can add a message or handle this case differently)
-//            }
-//
-//            // Increase mistake count
-//            mistakes++;
-//
-//            // Update UI based on mistake count
-//            switch (mistakes) {
-//                case 1:
-//                    base.setVisible(true);
-//                    break;
-//                case 2:
-//                    Pole.setVisible(true);
-//                    break;
-//                case 3:
-//                    Pole2.setVisible(true);
-//                    break;
-//                case 4:
-//                    Pole3.setVisible(true);
-//                    break;
-//                case 5:
-//                    Box.setVisible(true);
-//                    break;
-//                case 6:
-//                    rope.setVisible(true);
-//                    break;
-//                case 7:
-//                    human.setVisible(true);
-//
-//                    status.setText("You Lose!");
-//                    correctAnswear.setText("The correct answer was " + myWord);
-//                    alphabet.setDisable(true);
-//                    break;
-//            }
-//        } else {
-//            // If the maximum mistakes have been reached, do nothing (you can add a message or handle this case differently)
-//        }
-//    }
 
 
 
-    private boolean hintUsed = false;
+
+
 
     public void hint(ActionEvent event) {
-        if (!hintUsed && mistakes < 7 && correct < myWord.length() - 1) {
+        // !chưa sử dụng hint, mistake < 7 và nhở hơn từ cần tìm
+        if (!hintUsed && mistakes < 7 && correct < myWord.length() - 1 ) {
+
             int hiddenIndex = findFirstHiddenLetter();
 
             // If there is a hidden letter, reveal it
@@ -222,6 +218,7 @@ public class HangmanController {
         }
     }
 
+    // !hàm tìm từ đầu tiên của "từ cần đoán"
     private int findFirstHiddenLetter() {
         for (int i = 0; i < answer.size(); i += 2) {
             if (answer.get(i).equals("_")) {
@@ -230,6 +227,8 @@ public class HangmanController {
         }
         return -1;
     }
+
+
 
     private void updateUI() {
         switch (mistakes) {
@@ -261,16 +260,25 @@ public class HangmanController {
         }
     }
 
+
+    // !hàm dành cho các nút alphabet
     public void onClick(ActionEvent event) {
         String letter = ((Button) event.getSource()).getText();
         ((Button) event.getSource()).setDisable(true);
+
         if (myLetters.contains(letter)) {
-            correct++;
-            int letterIndex = myLetters.indexOf(letter);
-            answer.set(letterIndex * 2, letter);
+            for (int i = 0; i < myLetters.size(); i++) {
+                if (myLetters.get(i).equals(letter)) {
+                    answer.set(i * 2, letter);
+                    correct++;
+                }
+            }
+
             String res = String.join("", answer);
             currText.setText(res);
-            if (correct == myWord.length()) {
+
+            // Kiểm tra xem tất cả các chữ cái đã được đoán đúng hay chưa
+            if (!res.contains("_")) {
                 status.setText("You Win!");
                 alphabet.setDisable(true);
             }
