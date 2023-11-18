@@ -37,11 +37,6 @@
 }
 
 
-.button {
-    -fx-background-color: none;
-    -fx-text-fill: -text-color;
-    -fx-font-size: 15;
-}
 
 .button:hover {
     -fx-background-color: -hover-background-color;
@@ -56,6 +51,11 @@
 }
 
 
+.button {
+    -fx-background-color: none;
+    -fx-text-fill: -text-color;
+    -fx-font-size: 15;
+}
 
 .button-search {
     -fx-graphic: url('../Icon/search.png');
@@ -91,4 +91,18 @@
 
 .button-Game.active {
     -fx-graphic: url('../Icon/Game.png');
+}
+
+
+
+.button-Database {
+    -fx-graphic: url('../Icon/BD1.png');
+}
+
+.button-Database:hover {
+    -fx-graphic: url('../Icon/BD1.png');
+}
+
+.button-Database.active {
+    -fx-graphic: url('../Icon/BD1.png');
 }

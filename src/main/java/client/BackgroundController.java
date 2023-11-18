@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BackgroundController implements Initializable {
+public class BackgroundController  implements Initializable {
 
     @FXML
     private AnchorPane mainContent;
@@ -22,6 +22,8 @@ public class BackgroundController implements Initializable {
     private AnchorPane translatePane;
     @FXML
     private AnchorPane hangmanPane;
+    @FXML
+    private AnchorPane databasePane;
 
 
 
@@ -30,10 +32,11 @@ public class BackgroundController implements Initializable {
     private SearchController searchController;
     private TranslateController translateController;
     private HangmanController hangmanController;
+    private DBController dbController;
 
 
 
-
+    // TODO: so sánh với showcompoent của bạn
 
     @FXML
     private Button translateButton;
@@ -43,6 +46,11 @@ public class BackgroundController implements Initializable {
 
     @FXML
     private Button gameButton;
+
+    @FXML
+    private Button databaseButton;
+
+
 
 
 
@@ -57,6 +65,7 @@ public class BackgroundController implements Initializable {
         SearchButton.getStyleClass().removeAll("active");
         translateButton.getStyleClass().removeAll("active");
         gameButton.getStyleClass().removeAll("active");
+        databaseButton.getStyleClass().removeAll("active");
     }
 
 
@@ -84,6 +93,13 @@ public class BackgroundController implements Initializable {
         setMainContent(hangmanPane);
     }
 
+    public void showDatabasePane() {
+        resetStyleNav();;
+        databaseButton.getStyleClass().add("active");
+
+        setMainContent(databasePane);
+    }
+
 
 
 
@@ -108,6 +124,13 @@ public class BackgroundController implements Initializable {
             hangmanPane = loader.load();
             hangmanController = loader.getController();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dictionary/Database.fxml"));
+            databasePane = loader.load();
+            dbController = loader.getController();
+        }catch (Exception e) {
             e.printStackTrace();
         }
 

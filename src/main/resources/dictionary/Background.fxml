@@ -28,7 +28,7 @@
                   <String fx:value="button-Game" />
                   <String fx:value="text-navi-bar" />
                </styleClass></Button>
-            <Button mnemonicParsing="false" prefHeight="96.0" prefWidth="144.0" text="...." />
+            <Button fx:id="databaseButton" mnemonicParsing="false" onAction="#showDatabasePane" prefHeight="96.0" prefWidth="144.0" styleClass="button-Database" text="...." />
          </children></VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="138.0">
          <children>

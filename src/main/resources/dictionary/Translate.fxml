@@ -18,5 +18,7 @@
             <ChoiceBox fx:id="LanguageTranslateFrom" prefHeight="37.0" prefWidth="201.0" />
          </children>
       </HBox>
+      <Button fx:id="SpeakBeTranslated" layoutX="28.0" layoutY="88.0" mnemonicParsing="false" onAction="#HandleBeTranslatedspeakButton" text="Button" />
+      <Button fx:id="SpeakTranslatedFrom" layoutX="422.0" layoutY="88.0" mnemonicParsing="false" onAction="#HandleTranslatedFromspeakButton" text="Button" />
    </children>
 </AnchorPane>

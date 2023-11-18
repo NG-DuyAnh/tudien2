@@ -3,6 +3,7 @@ package client;
 import Game.Hangman;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
@@ -16,7 +17,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
 
-public class HangmanController {
+public class HangmanController  {
 
 
 

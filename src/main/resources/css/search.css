@@ -25,7 +25,9 @@
     -fx-background-color: #e3e5e8;
 }
 
-
+body {
+    color: red; /* Change the text color to red */
+}
 
 .html-editor {
     -fx-pref-width: 100;
@@ -38,3 +40,16 @@
 .html-editor .button, .html-editor .toggle-button {
     -fx-background-color: -hover-background-color;
 }
+
+.UKspeakButton {
+    -fx-graphic: url('../Icon/UK3.png');
+}
+
+.UKspeakButton:hover {
+    -fx-graphic: url('../Icon/UK3.png');
+}
+
+.UKspeakButton.active {
+    -fx-graphic: url('../Icon/UK3.png');
+}
+

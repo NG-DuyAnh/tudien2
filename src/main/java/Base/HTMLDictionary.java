@@ -1,8 +1,7 @@
 package Base;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class HTMLDictionary {
@@ -36,6 +35,26 @@ public class HTMLDictionary {
         }
     }
 
+    public void updateWordListtoHTMLfile (String path, TreeMap<String,String> tempList){
+        try{
+            File file = new File(path) ;
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+
+            for (Map.Entry<String,String> entry : tempList.entrySet()){
+                String word = entry.getKey();
+                String meaning = entry.getValue();
+                writer.write(word + meaning + "\n");
+            }
+
+            writer.flush();
+            writer.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+
+
 //    public void HTMLDictionary(String path){
 //
 //        loadFromFile(path);
@@ -43,4 +62,5 @@ public class HTMLDictionary {
 //    }
 
 
-}
+        }
+
