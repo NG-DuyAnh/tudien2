@@ -1,0 +1,84 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+void convert_to_html(const std::string &input_file, const std::string &output_file)
+{
+    std::ifstream infile(input_file);
+    std::ofstream outfile(output_file);
+
+    if (!infile.is_open() || !outfile.is_open())
+    {
+        std::cerr << "Error opening files.";
+        return;
+    }
+
+    std::vector<std::string> lines;
+    std::string line;
+
+    while (std::getline(infile, line))
+    {
+        lines.push_back(line);
+    }
+
+    outfile << "<html>";
+
+    for (const auto &line : lines)
+    {
+        if (line.find('!') == 0)
+        {
+            outfile << "<ul><li><font color=\"#cc0000\"><b>" << line.substr(1) << "</b></font></li></ul>";
+        }
+        else if (line.find('=') == 0)
+        {
+            outfile << "<ul><li><font color=\"#cc0000\"><b>" << line.substr(1) << "</b></font></li></ul>";
+        }
+        else if (line.find('@') == 0)
+        {
+            outfile << "<i>" << line.substr(1) << "</i><br/><ul>";
+        }
+        else if (line.find('*') == 0)
+        {
+            outfile << "<ul><li><b>" << line.substr(1) << "</b></li><ul>";
+        }
+        else if (line.find('-') == 0)
+        {
+            outfile << "<li>" << line.substr(1) << "</li>";
+        }
+        else if (line.find('+') == 0)
+        {
+            outfile << "<li><b>" << line.substr(1) << "</b>:";
+        }
+        else if (line.find('=') == 0)
+        {
+            outfile << "<ul><li><font color=\"#cc0000\"><b>" << line.substr(1) << "</b></font></li></ul>";
+        }
+        else if (line.find('(') == 0)
+        {
+            outfile << "<ul><li><font color=\"#cc0000\"><b>" << line.substr(1) << "</b></font><ul>";
+        }
+        else if (line.find(')') == 0)
+        {
+            outfile << "</ul></li></ul>";
+        }
+        else
+        {
+            outfile << line;
+        }
+    }
+
+    outfile << "</html>";
+
+    infile.close();
+    outfile.close();
+}
+
+int main()
+{
+    std::string input_file = "dictionary.txt";
+    std::string output_file = "output.txt";
+
+    convert_to_html(input_file, output_file);
+
+    return 0;
+}
