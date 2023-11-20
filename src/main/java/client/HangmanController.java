@@ -66,6 +66,8 @@ public class HangmanController  {
     @FXML
     private MenuButton difficultyButton;
 
+
+
     @FXML
     private MenuItem easy;
 
@@ -86,6 +88,8 @@ public class HangmanController  {
     private List<String> myLetters;
     private List<String> answer;
 
+    String difficulty = "easy"; // default to easy
+
 
 
     public void initialize() {
@@ -100,10 +104,8 @@ public class HangmanController  {
 
         mistakes=0;
         correct=0;
-        String difficulty = "easy"; // default to easy
-        if (difficultyButton.getText().equals("hard")) {
-            difficulty = "hard";
-        }
+
+
         try {
             words = new Hangman(difficulty);
         } catch (FileNotFoundException e) {
@@ -125,6 +127,7 @@ public class HangmanController  {
         correctAnswear.setText("");
         alphabet.setDisable(false);
         hintUsed = false;
+
     }
 
     @FXML
@@ -133,10 +136,11 @@ public class HangmanController  {
         MenuItem selectedDifficulty = (MenuItem) event.getSource();
         difficultyButton.setText(selectedDifficulty.getText());
 
-        String difficulty = selectedDifficulty.getId(); // Assuming you set the id for menu items as the difficulty level
+        difficulty = selectedDifficulty.getId(); // Assuming you set the id for menu items as the difficulty level
 
 
         try {
+
             words = new Hangman(difficulty);
         } catch (FileNotFoundException e) {
             e.printStackTrace(); // Handle the exception appropriately

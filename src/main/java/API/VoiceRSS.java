@@ -18,10 +18,8 @@ public class VoiceRSS {
 
     public static String Voice;
 
-    //public static String voiceNameUS;
-    //public static String voiceNameUK;
-    public static String language = "en-gb";
-    public static String Name = "Chi";
+    public static String language ;
+
     public static double speed = 1;
 
 

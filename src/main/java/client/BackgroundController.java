@@ -12,7 +12,9 @@ import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BackgroundController  implements Initializable {
+public class BackgroundController   implements Initializable {
+
+
 
     @FXML
     private AnchorPane mainContent;
@@ -24,6 +26,8 @@ public class BackgroundController  implements Initializable {
     private AnchorPane hangmanPane;
     @FXML
     private AnchorPane databasePane;
+    @FXML
+    private AnchorPane settingPane;
 
 
 
@@ -33,6 +37,7 @@ public class BackgroundController  implements Initializable {
     private TranslateController translateController;
     private HangmanController hangmanController;
     private DBController dbController;
+    private SettingController settingController;
 
 
 
@@ -50,6 +55,9 @@ public class BackgroundController  implements Initializable {
     @FXML
     private Button databaseButton;
 
+    @FXML
+    private Button settingButton;
+
 
 
 
@@ -66,6 +74,7 @@ public class BackgroundController  implements Initializable {
         translateButton.getStyleClass().removeAll("active");
         gameButton.getStyleClass().removeAll("active");
         databaseButton.getStyleClass().removeAll("active");
+        settingButton.getStyleClass().removeAll("active");
     }
 
 
@@ -75,7 +84,8 @@ public class BackgroundController  implements Initializable {
     public void showSearchPane() {
         resetStyleNav();   //xóa đậm tất cả button
         SearchButton.getStyleClass().add("active"); // giữ button đậm
-        searchController.initSearchListView(); //reset lại pane khi quay trở lại
+        //searchController.initSearchListView(); //reset lại pane khi quay trở lại
+        searchController.updateButtonsVisibility() ;
         setMainContent(searchPane);
     }
 
@@ -83,21 +93,28 @@ public class BackgroundController  implements Initializable {
     public void showTranslatePane() {
         resetStyleNav();   //xóa đậm tất cả button
         translateButton.getStyleClass().add("active"); // giữ button đậm
-        translateController.initSearchListView(); //reset lại pane khi quay trở lại
+        //translateController.initSearchListView(); //reset lại pane khi quay trở lại
         setMainContent(translatePane);
     }
     public void showGamePane() {
         resetStyleNav();   //xóa đậm tất cả button
         gameButton.getStyleClass().add("active"); // giữ button đậm
-        //translateButton.initSearchListView(); //reset lại pane khi quay trở lại
+        //Game.initSearchListView(); //reset lại pane khi quay trở lại
         setMainContent(hangmanPane);
     }
 
     public void showDatabasePane() {
-        resetStyleNav();;
+        resetStyleNav();
         databaseButton.getStyleClass().add("active");
-
+        dbController.updateButtonsVisibility() ;
         setMainContent(databasePane);
+    }
+
+    public void showSettingPane() {
+        resetStyleNav();
+        settingButton.getStyleClass().add("active");
+
+        setMainContent(settingPane);
     }
 
 
@@ -131,6 +148,13 @@ public class BackgroundController  implements Initializable {
             databasePane = loader.load();
             dbController = loader.getController();
         }catch (Exception e) {
+            e.printStackTrace();
+        }
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dictionary/Setting.fxml"));
+            settingPane = loader.load();
+            settingController = loader.getController();
+        }catch (Exception e){
             e.printStackTrace();
         }
 

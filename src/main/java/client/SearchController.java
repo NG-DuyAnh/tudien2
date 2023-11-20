@@ -5,6 +5,8 @@ import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -19,12 +21,13 @@ public class SearchController extends UtilitiesController implements Initializab
     @FXML
     private Button USspeakingButton;
 
-    private static String UKVoice = "Harry" ;
 
-    private static String USVoice = "Linda" ;
 
     @FXML
     protected WebView definitionView;
+
+
+
 
     public void handleClickListView() {
         selectedWord = listView.getSelectionModel().getSelectedItem();
@@ -39,7 +42,7 @@ public class SearchController extends UtilitiesController implements Initializab
 
 
     public void showDefinitionInWebView() {
-        String selectedWord = listView.getSelectionModel().getSelectedItem();
+        selectedWord = listView.getSelectionModel().getSelectedItem();
         if (selectedWord != null) {
             String meaning = htmlDictionary.getWordList().get(selectedWord);
             if (meaning != null) {
@@ -87,12 +90,20 @@ public class SearchController extends UtilitiesController implements Initializab
 
 
     public void HandleUKspeakButton() throws Exception{
-        VoiceRSS.Voice = UKVoice;
-        GeneralhandleSpeakButton("en-gb",selectedWord);
+        if (voiceUK == null){
+            voiceUK = "Harry";
+        }
+        GeneralhandleSpeakButton("en-gb",selectedWord,voiceUK);
     }
 
     public void HandleUSspeakButton() throws Exception{
-        VoiceRSS.Voice = USVoice;
-        GeneralhandleSpeakButton("en-us",selectedWord);
+        if (voiceUS == null){
+            voiceUS = "Linda";
+        }
+        GeneralhandleSpeakButton("en-us",selectedWord,voiceUS);
     }
+
+
+
+
 }

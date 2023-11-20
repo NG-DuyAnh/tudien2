@@ -7,6 +7,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
 import javafx.event.ActionEvent;
 
+import javax.swing.*;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 public class DBController extends UtilitiesController implements Initializable {
 
@@ -48,27 +52,58 @@ public class DBController extends UtilitiesController implements Initializable {
             return;
         }
         if (newWord.isEmpty() ){
-            showAlert("Error", "Thiêu đầu vào 1");
+            showAlert("Error", "Thiếu từ mới");
             return;
         }
         if ( newMeaning.isEmpty()){
-            showAlert("Error", "Thiêu đầu vào 2");
+            showAlert("Error", "Thiêu nghĩa mới");
             return;
         }
 
-        htmlDictionary.getWordList().put(newWord,newMeaning);
-
+        //htmlDictionary.getWordList().put(newWord,newMeaning);
+        htmlDictionary.updateWord(newWord,newMeaning);
         htmlDictionary.updateWordListtoHTMLfile(Path, htmlDictionary.getWordList());
+        updateSearchResults();
 
+
+    }
+
+    @FXML
+    public void handleSaveEdit(ActionEvent event) {
+        String editedMeaning = Editor.getHtmlText().replace(" dir=\"ltr\"", "").trim();
+
+        if (selectedWord != null && !editedMeaning.isEmpty()) {
+            htmlDictionary.updateWord(selectedWord, editedMeaning);
+            htmlDictionary.updateWordListtoHTMLfile(Path, htmlDictionary.getWordList());
+
+            // Optionally, clear the editor after saving
+            Editor.setHtmlText("");
+        } else {
+            // Show an alert indicating that no word is selected or the edited meaning is empty
+            showAlert("Error", "No word selected or edited meaning is empty");
+        }
+    }
+
+    public void handleRemoveWord (ActionEvent event){
+        if(selectedWord == null){
+            showAlert("Error", "No word selected");
+            return;
+        }
+        htmlDictionary.removeWord(selectedWord);
+        htmlDictionary.updateWordListtoHTMLfile(Path, htmlDictionary.getWordList());
         Editor.setHtmlText("");
         searchBar.clear();
+        listView.getItems().clear();
     }
+
 
     private void showAlert(String title, String content){
         Alert alert = new Alert(Alert.AlertType.ERROR, content, ButtonType.OK);
         alert.setTitle(title);
         alert.showAndWait();
     }
+
+
 
 
 

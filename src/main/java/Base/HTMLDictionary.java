@@ -43,6 +43,11 @@ public class HTMLDictionary {
             for (Map.Entry<String,String> entry : tempList.entrySet()){
                 String word = entry.getKey();
                 String meaning = entry.getValue();
+                // Add HTML tags if not already present
+                if (!meaning.startsWith("<html>")) {
+                    meaning = "<html>" + meaning + "</html>";
+                }
+
                 writer.write(word + meaning + "\n");
             }
 
@@ -53,6 +58,23 @@ public class HTMLDictionary {
         }
     }
 
+    public void updateWord (String word,  String newMeaning) {
+        if (wordList.containsKey(word)) {
+            if (!newMeaning.startsWith("<html>")){
+                newMeaning = "<html>" + newMeaning + "<html>" ;
+            }
+        }
+        wordList.put(word, newMeaning);
+    }
+
+    public void removeWord(String word) {
+        wordList.remove(word);
+    }
+
+
+    public void clearWordList() {
+        wordList.clear();
+    }
 
 
 //    public void HTMLDictionary(String path){

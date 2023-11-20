@@ -54,16 +54,25 @@ public class TranslateController extends UtilitiesController implements Initiali
         LanguageBeTranslated_Voice = LanguageBeTranslated.getValue();
         switch (LanguageBeTranslated_Voice) {
             case "vi":
-                GeneralhandleSpeakButton("vi-vn", BeTranslatedText );
+                GeneralhandleSpeakButton("vi-vn", BeTranslatedText,voiceVI );
                 break;
             case "en":
-                GeneralhandleSpeakButton("en-gb", BeTranslatedText );
+                if (voiceUK == null){
+                    voiceUK = "Harry";
+                }
+                GeneralhandleSpeakButton("en-gb", BeTranslatedText,voiceUK );
                 break;
             case "zh" :
-                GeneralhandleSpeakButton("zh-cn", BeTranslatedText );
+                if (voiceZH == null){
+                    voiceZH = "Luli";
+                }
+                GeneralhandleSpeakButton("zh-cn", BeTranslatedText,voiceZH );
                 break;
             case "ru" :
-                GeneralhandleSpeakButton("ru-ru", BeTranslatedText );
+                if (voiceRU == null){
+                    voiceRU = "Marina";
+                }
+                GeneralhandleSpeakButton("ru-ru", BeTranslatedText,voiceRU );
                 break;
         }
     }
@@ -74,16 +83,26 @@ public class TranslateController extends UtilitiesController implements Initiali
         LanguageTranslateFrom_Voice = LanguageTranslateFrom.getValue();
         switch (LanguageTranslateFrom_Voice) {
             case "vi":
-                GeneralhandleSpeakButton("vi-vn", TranslatedFromText );
+
+                GeneralhandleSpeakButton("vi-vn", TranslatedFromText,voiceVI);
                 break;
             case "en":
-                GeneralhandleSpeakButton("en-gb", TranslatedFromText );
+                if (voiceUK == null){
+                    voiceUK = "Harry";
+                }
+                GeneralhandleSpeakButton("en-gb", TranslatedFromText,voiceUK );
                 break;
             case "zh" :
-                GeneralhandleSpeakButton("zh-cn", TranslatedFromText );
+                if (voiceZH == null){
+                    voiceZH = "Luli";
+                }
+                GeneralhandleSpeakButton("zh-cn", TranslatedFromText,voiceZH );
                 break;
             case "ru" :
-                GeneralhandleSpeakButton("ru-ru", TranslatedFromText );
+                if (voiceRU == null){
+                    voiceRU = "Marina";
+                }
+                GeneralhandleSpeakButton("ru-ru", TranslatedFromText,voiceRU);
                 break;
         }
     }

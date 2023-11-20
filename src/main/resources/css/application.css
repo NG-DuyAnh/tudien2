@@ -1,18 +1,9 @@
 .root {
-    -fx-background-color: linear-gradient(to bottom right, #e6e6e6, #e0e0e0);
+    -fx-background-color: linear-gradient(to bottom right, #171f27, #343434);
     /*-fx-background-color: linear-gradient(to bottom right, #752e65, #44008b);*/
-    -button-color: #747f8d;
-    -hover-button-color: #2e3338;
 
-    -purple-color: #5865F2;
-    -hover-purple-color: #4752C4;
 
-    -text-color: #555c5d;
-    -hover-text-color: #2e3338;
 
-    -gray-color: #e6e6e6;
-    -title-color: #060607;
-    -hover-background-color: #D4D7DC;
 }
 /*#sidebar{*/
 /*    -fx-background-color: #ffffff;*/
@@ -26,35 +17,54 @@
 /*}*/
 
 
+* {
+    -fx-font-family: "Segoe UI Bold";
+}
+
 .button-favicon {
     -fx-graphic: url('../Icon/book.jpg');
 }
 .button-favicon:hover {
     -fx-background-color: none;
-    -fx-text-fill: -text-color;
+    -fx-text-fill:  #6adaea;
     -fx-font-size: 20;
     -fx-cursor: default;
 }
 
 
 
+
+
 .button:hover {
-    -fx-background-color: -hover-background-color;
-    -fx-text-fill: -hover-text-color;
-    -fx-cursor: hand;
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
 }
 
 .button.active {
-    -fx-background-color: -hover-background-color;
-    -fx-text-fill: -hover-text-color;
-    -fx-cursor: hand;
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
 }
 
 
 .button {
-    -fx-background-color: none;
-    -fx-text-fill: -text-color;
-    -fx-font-size: 15;
+    background-color: #2a3439;
+    -fx-background-color: #2a3439;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+
 }
 
 .button-search {
@@ -105,4 +115,16 @@
 
 .button-Database.active {
     -fx-graphic: url('../Icon/BD1.png');
+}
+
+.button-setting {
+    /*-fx-graphic: url('../Icon/BD1.png');*/
+}
+
+.button-setting:hover {
+    /*-fx-graphic: url('../Icon/BD1.png');*/
+}
+
+.button-setting.active {
+    /*-fx-graphic: url('../Icon/BD1.png');*/
 }

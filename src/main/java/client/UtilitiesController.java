@@ -5,10 +5,7 @@ import API.VoiceRSS;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.web.WebView;
 
 import java.io.BufferedReader;
@@ -23,14 +20,37 @@ import java.util.stream.Collectors;
 public class UtilitiesController implements Initializable {
 
 
+
+    protected static String voiceUS;
+
+    protected static String voiceUK;
+
+    protected static String voiceVI;
+
+    protected static String voiceRU;
+
+    protected static String voiceZH;
+
+
+
     protected static HTMLDictionary htmlDictionary = new HTMLDictionary();
-    protected static String Path = "F:\\Dictionary\\src\\main\\resources\\DB\\test.txt" ;
+
+
+    protected static final String EVPath = "F:\\Dictionary\\src\\main\\resources\\DB\\eng_vie.txt"  ;
+
+    protected static final String VEPath = "F:\\Dictionary\\src\\main\\resources\\DB\\vie_eng.txt" ;
+
+    protected static String Path ;
+
+    @FXML
+    protected   Button VietAnh;
+    @FXML
+    protected   Button AnhViet;
 
 
 
 
     // !BIẾN XỬ LÍ THANH TÌM KIẾM VÀ THANH HIỆN CHỮ (SEARCH)
-
     @FXML
     protected ListView<String> listView;
 
@@ -38,10 +58,8 @@ public class UtilitiesController implements Initializable {
     protected TextField searchBar;
 
 
+
     // !Bbiến xử lí hiện meaning của word
-
-
-
     protected String selectedWord;
 
 
@@ -49,12 +67,13 @@ public class UtilitiesController implements Initializable {
 
     //TODO: tìm hiểu sao lại có intiialize ở background và các lớp con của lớp này
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
+        Path = EVPath;
+        VietAnh.setVisible(false);
         htmlDictionary.loadFromFile(Path);
         //listView.getItems().addAll(htmlDictionary.getWordList().values());
 
         // ?code này hiện tất cả các từ khi mở chương trình
+        // !và đã đươc chặn ở method dưới ????
         searchBar.setOnKeyReleased(event -> {
             updateSearchResults();
         });
@@ -93,11 +112,11 @@ public class UtilitiesController implements Initializable {
     // !click vào từ sẽ hiện meaning của nó
 
 
-    public void GeneralhandleSpeakButton(String language, String textToSpeak) throws Exception {
+    public void GeneralhandleSpeakButton(String language, String textToSpeak, String Voice) throws Exception {
         // !set người nói ở controller riêng
         //! hoặc không cần vì nếu ko set voice thì nó để mặc định khi chỉnh language
         VoiceRSS.language = language;
-
+        VoiceRSS.Voice = Voice;
         // Start a new thread to speak the text ( un synchorize) lên web RSS
         new Thread(() -> {
             try {
@@ -121,7 +140,37 @@ public class UtilitiesController implements Initializable {
 //        }).start();
 //    }
 
+    @FXML
+    public void handleVietAnhButton() {
+        VietAnh.setVisible(false);
+        AnhViet.setVisible(true);
+        Path = EVPath;
+        htmlDictionary.clearWordList();  // Clear the entire word list
+        htmlDictionary.loadFromFile(Path);
+        searchBar.clear();
+        listView.getItems().clear();
+    }
 
+    @FXML
+    public void handleAnhVietButton() {
+        AnhViet.setVisible(false);
+        VietAnh.setVisible(true);
+        Path = VEPath;
+        htmlDictionary.clearWordList();  // Clear the entire word list
+        htmlDictionary.loadFromFile(Path);
+        searchBar.clear();
+        listView.getItems().clear();
+    }
+
+    public void updateButtonsVisibility() {
+        if (Path.equals(EVPath)) {
+            VietAnh.setVisible(false);
+            AnhViet.setVisible(true);
+        } else if (Path.equals(VEPath)) {
+            AnhViet.setVisible(false);
+            VietAnh.setVisible(true);
+        }
+    }
 
 
 

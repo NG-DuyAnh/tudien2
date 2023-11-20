@@ -7,28 +7,16 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1280.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.BackgroundController">
    <children>
-      <VBox fx:id="sidebar" alignment="TOP_CENTER" layoutY="171.0" prefHeight="360.0" prefWidth="138.0">
+      <VBox fx:id="sidebar" alignment="TOP_CENTER" layoutY="171.0" prefHeight="462.0" prefWidth="138.0">
          <children>
-            <Button fx:id="SearchButton" alignment="CENTER" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="92.0" prefWidth="141.0" text="tra từ">
-               <styleClass>
-                  <String fx:value="text-navi-bar" />
-                  <String fx:value="button-search" />
-               </styleClass>
-            </Button>
+            <Button fx:id="SearchButton" alignment="CENTER" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="92.0" prefWidth="141.0" styleClass="button-search" text="tra từ" />
 
-            <Button fx:id="translateButton" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="90.0" prefWidth="137.0" text="dịch nghĩa">
-               <styleClass>
-                  <String fx:value="button-translate" />
-                  <String fx:value="text-navi-bar" />
-               </styleClass></Button>
+            <Button fx:id="translateButton" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="90.0" prefWidth="137.0" styleClass="button-translate" text="dịch nghĩa" />
 
 
-            <Button fx:id="gameButton" mnemonicParsing="false" onAction="#showGamePane" prefHeight="95.0" prefWidth="139.0" text="game">
-               <styleClass>
-                  <String fx:value="button-Game" />
-                  <String fx:value="text-navi-bar" />
-               </styleClass></Button>
-            <Button fx:id="databaseButton" mnemonicParsing="false" onAction="#showDatabasePane" prefHeight="96.0" prefWidth="144.0" styleClass="button-Database" text="...." />
+            <Button fx:id="gameButton" mnemonicParsing="false" onAction="#showGamePane" prefHeight="95.0" prefWidth="139.0" styleClass="button-Game" text="game" />
+            <Button fx:id="databaseButton" mnemonicParsing="false" onAction="#showDatabasePane" prefHeight="96.0" prefWidth="144.0" styleClass="button-Database" text="DB" />
+            <Button fx:id="settingButton" mnemonicParsing="false" onAction="#showSettingPane" prefHeight="96.0" prefWidth="144.0" styleClass="button-setting" text="setting" />
          </children></VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="138.0">
          <children>

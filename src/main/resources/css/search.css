@@ -1,20 +1,7 @@
-.root {
-    -button-color: #747f8d;
-    -hover-button-color: #2e3338;
 
-    -purple-color: #5865F2;
-    -hover-purple-color: #4752C4;
-
-    -text-color: #555c5d;
-    -hover-text-color: #2e3338;
-
-    -gray-color: #e6e6e6;
-    -title-color: #060607;
-    -hover-background-color: #D4D7DC;
-}
 
 .first-color {
-    -fx-background-color: white;
+    -fx-background-color: #414D53FF;
 }
 
 .second-color {
@@ -25,20 +12,18 @@
     -fx-background-color: #e3e5e8;
 }
 
-body {
-    color: red; /* Change the text color to red */
-}
+
 
 .html-editor {
-    -fx-pref-width: 100;
-    -fx-border-color: -purple-color;
+
+    -fx-border-color: #ff0000;
     -fx-border-radius: 3;
     -fx-focus-color: transparent;
     -fx-font-size: 12;
 }
 
 .html-editor .button, .html-editor .toggle-button {
-    -fx-background-color: -hover-background-color;
+    -fx-background-color: #395362;
 }
 
 .UKspeakButton {
