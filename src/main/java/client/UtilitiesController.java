@@ -3,9 +3,13 @@ package client;
 import Base.HTMLDictionary;
 import API.VoiceRSS;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.web.WebView;
 
 import java.io.BufferedReader;
@@ -64,6 +68,25 @@ public class UtilitiesController implements Initializable {
 
 
 
+    protected final ObjectProperty<Color> pageFillProperty = new SimpleObjectProperty<>(Color.web("#171d20"));
+
+
+
+    public ObjectProperty<Color> pageFillProperty() {
+        return pageFillProperty;
+    }
+
+    public Color getPageFill() {
+        return pageFillProperty.get();
+    }
+
+    public void setPageFill(Color color) {
+        pageFillProperty.set(color);
+    }
+
+
+
+
 
     //TODO: tìm hiểu sao lại có intiialize ở background và các lớp con của lớp này
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -78,7 +101,14 @@ public class UtilitiesController implements Initializable {
             updateSearchResults();
         });
 
+
     }
+
+
+
+
+
+
 
     // ! xử lí tìm kiếm (SEARCH)
 //    public void updateSearchResults() {

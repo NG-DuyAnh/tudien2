@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
@@ -17,7 +18,13 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
 
-public class HangmanController  {
+public class HangmanController    {
+
+    private AnchorPane rootPane;
+    public AnchorPane getRootPane() {
+        return rootPane;
+    }
+
 
 
 
@@ -65,8 +72,8 @@ public class HangmanController  {
     // !độ khó trò chơi
     @FXML
     private MenuButton difficultyButton;
-
-
+    @FXML
+    private Button newGamebutton;
 
     @FXML
     private MenuItem easy;
@@ -291,5 +298,9 @@ public class HangmanController  {
             mistakes++;
             updateUI();
         }
+    }
+
+    public AnchorPane getRootPane(AnchorPane rootPane) {
+        return rootPane;
     }
 }

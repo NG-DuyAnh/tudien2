@@ -18,7 +18,7 @@ public class App extends Application {
 
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/dictionary/Background.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/dictionary/EXBackground.fxml"));
                                                                     //"/dictionary/hello-view.fxml"F:\Dictionary\src\main\resources\dictionary\Background.fxml
             Scene scene = new Scene(root, 1000, 800);
 //            scene.getStylesheets().add(getClass().getResource("/css/application.css").toExternalForm());

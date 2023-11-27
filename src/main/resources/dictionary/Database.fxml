@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="798.0" prefWidth="825.0" stylesheets="@../css/database.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.DBController">
+<AnchorPane fx:id="DBpane" prefHeight="798.0" prefWidth="825.0" stylesheets="@../css/database.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.DBController">
    <children>
       <AnchorPane layoutY="8.0" prefHeight="798.0" prefWidth="262.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>

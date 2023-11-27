@@ -1,25 +1,11 @@
 .root {
-    -fx-background-color: linear-gradient(to bottom right, #171f27, #343434);
+    -fx-background-color: linear-gradient(to bottom right, #1e2529, #1e2529);
     /*-fx-background-color: linear-gradient(to bottom right, #752e65, #44008b);*/
-
-
-
 }
-/*#sidebar{*/
-/*    -fx-background-color: #ffffff;*/
-/*}*/
 
 
-/*.container{*/
-/*    -fx-background-color: #a7a7a7;*/
-/*    -fx-background-radius: 5;*/
-/*    -fx-border-radius: 5;*/
-/*}*/
 
 
-* {
-    -fx-font-family: "Segoe UI Bold";
-}
 
 .button-favicon {
     -fx-graphic: url('../Icon/book.jpg');
@@ -31,51 +17,80 @@
     -fx-cursor: default;
 }
 
+                                        /* ?           BUTTON            */
+/*!________________________________________________________________________________________________________*/
 
 
-
-
-.button:hover {
-    background-color: #414d53;
-    -fx-background-color: #414d53;
-    /*-fx-background-radius: 10px;*/
-    -fx-text-fill: #bce4f9;
-    -fx-font-family: "Distefano Sans Bold";
-    -fx-font-size: 17px;
-    -fx-font-weight: bold;
-
-}
-
-.button.active {
-    background-color: #414d53;
-    -fx-background-color: #414d53;
-    /*-fx-background-radius: 10px;*/
-    -fx-text-fill: #bce4f9;
-    -fx-font-family: "Distefano Sans Bold";
-    -fx-font-size: 17px;
-    -fx-font-weight: bold;
-}
-
-
+/* *design cho button*/
 .button {
-    background-color: #2a3439;
+
     -fx-background-color: #2a3439;
     /*-fx-background-radius: 10px;*/
     -fx-text-fill: #bce4f9;
     -fx-font-family: "Distefano Sans Bold";
     -fx-font-size: 17px;
-
 }
 
+
+/* * khi button có chuột ở trên  */
+.button:hover {
+
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+
+/* * khi button ấn */
+.button:pressed {
+
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+/* * sau khi ấn, ấn button khác thì "unfocused"  */
+/*.button:focused {*/
+/*    background-color: #414d53;*/
+/*    -fx-background-color: #414d53;*/
+/*    !*-fx-background-radius: 10px;*!*/
+/*    -fx-text-fill: #bce4f9;*/
+/*    -fx-font-family: "Distefano Sans Bold";*/
+/*    -fx-font-size: 17px;*/
+/*    -fx-font-weight: bold;*/
+/*}*/
+
+
+/*!________________________________________________________________________________________________________*/
+
+
+                                        /* ?          individual BUTTON             */
 .button-search {
     -fx-graphic: url('../Icon/search.png');
 }
 .button-search:hover {
     -fx-graphic: url('../Icon/search.png');
 }
-.button-search.active {
+.button-search:pressed {
     -fx-graphic: url('../Icon/search.png');
 }
+.button-search:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
 
 
 .button-translate {
@@ -84,23 +99,39 @@
 .button-translate:hover {
     -fx-graphic: url('../Icon/translate.png');
 }
-
-.button-translate.active {
+.button-translate:pressed {
     -fx-graphic: url('../Icon/translate.png');
 }
-
+.button-translate:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
 
 
 .button-Game {
     -fx-graphic: url('../Icon/Game.png');
 }
-
 .button-Game:hover {
     -fx-graphic: url('../Icon/Game.png');
 }
-
-.button-Game.active {
+.button-Game:pressed {
     -fx-graphic: url('../Icon/Game.png');
+}
+.button-Game:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
 }
 
 
@@ -108,23 +139,23 @@
 .button-Database {
     -fx-graphic: url('../Icon/BD1.png');
 }
-
 .button-Database:hover {
     -fx-graphic: url('../Icon/BD1.png');
 }
-
-.button-Database.active {
+.button-Database:pressed {
     -fx-graphic: url('../Icon/BD1.png');
 }
-
-.button-setting {
-    /*-fx-graphic: url('../Icon/BD1.png');*/
+.button-Database:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
 }
 
-.button-setting:hover {
-    /*-fx-graphic: url('../Icon/BD1.png');*/
-}
 
-.button-setting.active {
-    /*-fx-graphic: url('../Icon/BD1.png');*/
-}
+
+

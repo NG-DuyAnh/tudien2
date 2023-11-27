@@ -1,17 +1,4 @@
-.root {
-    -button-color: #747f8d;
-    -hover-button-color: #2e3338;
 
-    -purple-color: #5865F2;
-    -hover-purple-color: #4752C4;
-
-    -text-color: #555c5d;
-    -hover-text-color: #2e3338;
-
-    -gray-color: #e6e6e6;
-    -title-color: #060607;
-    -hover-background-color: #D4D7DC;
-}
 
 
 
@@ -26,3 +13,120 @@
 .third-color {
     -fx-background-color: #e3e5e8;
 }
+
+
+.text-area,
+.text-field,
+:showing {
+    -fx-background-color: #171d20;
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+.text-area {
+    -fx-text-fill: #bce4f9;
+    -fx-background-color: #171d20;
+
+    -fx-padding: 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0; /* Remove any border radius */
+}
+.text-area .content {
+    -fx-background-color: #171d20; /* Background color */
+
+}
+
+#SpeakBeTranslated {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakBeTranslated:hover {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakBeTranslated:pressed {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakBeTranslated:focused {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+
+
+
+#SpeakTranslatedFrom {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakTranslatedFrom:hover {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakTranslatedFrom:pressed {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+#SpeakTranslatedFrom:focused {
+    -fx-graphic: url('../Icon/audio2.png');
+}
+
+
+
+#TranslateButton {
+    -fx-graphic: url('../Icon/tranlate1.png');
+}
+#TranslateButton:hover {
+    -fx-graphic: url('../Icon/tranlate1.png');
+}
+#TranslateButton:pressed {
+    -fx-graphic: url('../Icon/tranlate1.png');
+}
+#TranslateButton:focused {
+    -fx-graphic: url('../Icon/tranlate1.png');
+}
+
+
+/*.choice-box .text {*/
+/*    -fx-text-fill: #bce4f9; !* Font color *!*/
+/*}*/
+
+
+.choice-box .label {
+    -fx-text-fill: #bce4f9;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-base: #171d20;
+}
+.choice-box .menu-item:focused {
+    -fx-background-color: #414d53;
+}
+.choice-box {
+    -fx-background-color: #171d20; /* Background color */
+}
+.choice-box .context-menu {
+    -fx-background-color: #171d20;
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: transparent; /* Make the button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}
+
+
+
+
+.choice-box .arrow {
+    -fx-background-color: transparent; /* Make the arrow transparent */
+}
+
+.choice-box .open-button {
+    -fx-background-color: transparent; /* Make the open button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: transparent; /* Make the button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}
+
+
+

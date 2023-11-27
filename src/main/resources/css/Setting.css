@@ -14,3 +14,45 @@
 .forth-color {
     -fx-background-color: #1E2529;
 }
+
+
+.choice-box .label {
+    -fx-text-fill: #bce4f9;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-base: #171d20;
+}
+.choice-box .menu-item:focused {
+    -fx-background-color: #414d53;
+}
+.choice-box {
+    -fx-background-color: #171d20; /* Background color */
+}
+.choice-box .context-menu {
+    -fx-background-color: #171d20;
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: transparent; /* Make the button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}
+
+
+
+
+.choice-box .arrow {
+    -fx-background-color: transparent; /* Make the arrow transparent */
+}
+
+.choice-box .open-button {
+    -fx-background-color: transparent; /* Make the open button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: transparent; /* Make the button transparent */
+    -fx-padding: 0; /* Remove any padding */
+    -fx-background-radius: 0; /* Remove any border radius */
+}

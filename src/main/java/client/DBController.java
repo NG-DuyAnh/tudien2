@@ -4,8 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.event.ActionEvent;
+import javafx.scene.web.WebEngine;
 
 import javax.swing.*;
 import java.net.URL;
@@ -13,6 +15,11 @@ import java.util.ResourceBundle;
 
 
 public class DBController extends UtilitiesController implements Initializable {
+
+
+    @FXML
+    private AnchorPane DBpane;
+
 
     @FXML
     private Button RemoveWord;
@@ -28,6 +35,31 @@ public class DBController extends UtilitiesController implements Initializable {
     private HTMLEditor Editor;
 
 
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        super.initialize(url, resourceBundle);
+        setDefaultEditorBackground();
+    }
+
+
+//    private void setDefaultBackground() {
+//        // Set the default background color for the HTMLEditor
+//        String defaultBackgroundColor = pageFillProperty.get().toString().substring(2, 8);
+//        Editor.setHtmlText("<html><body style=\"background-color: #" + defaultBackgroundColor + ";\"></body></html>");
+//    }
+
+    private void setDefaultEditorBackground() {
+        // Lấy màu nền mặc định từ thuộc tính pageFillProperty
+        String defaultBackgroundColor = pageFillProperty.get().toString().substring(2, 8);
+
+        // Tạo chuỗi HTML với màu nền đã lấy
+        String htmlContent = "<html><body style=\"background-color: #" + defaultBackgroundColor + ";\"></body></html>";
+
+        // Đặt nội dung HTML cho HTMLEditor
+        Editor.setHtmlText(htmlContent);
+    }
+
+
+
 
     @FXML
     public void showDefinitionInEditor(MouseEvent event) {
@@ -35,15 +67,21 @@ public class DBController extends UtilitiesController implements Initializable {
         if (selectedWord != null) {
             // Xử lý từ đã được chọn, ví dụ: hiển thị nghĩa của từ
             String meaning = htmlDictionary.getWordList().get(selectedWord);
-            Editor.setHtmlText(meaning);
+
+            // Lấy màu từ PageFILL
+            String BackgroundColor = pageFillProperty.get().toString().substring(2,8);
+
+            //tạo chuỗi html với màu nền đã lấy
+            String EditorContent = "<html><body style=\"background-color: #" + BackgroundColor + ";\">" + meaning + "</body></html>";
+
+            Editor.setHtmlText(EditorContent);
+
+
         }
     }
 
     @FXML
     public void handleAddWord(ActionEvent event){
-
-
-
         String newWord = searchBar.getText().trim();
         String newMeaning = Editor.getHtmlText().replace(" dir=\"ltr\"", "").trim();
 

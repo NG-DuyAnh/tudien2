@@ -11,20 +11,15 @@
 .third-color {
     -fx-background-color: #e3e5e8;
 }
-
-
-
-.html-editor {
-
-    -fx-border-color: #ff0000;
-    -fx-border-radius: 3;
-    -fx-focus-color: transparent;
-    -fx-font-size: 12;
+.forth-color {
+    -fx-background-color: #171d20;
 }
 
-.html-editor .button, .html-editor .toggle-button {
-    -fx-background-color: #395362;
-}
+
+
+
+
+
 
 .UKspeakButton {
     -fx-graphic: url('../Icon/UK3.png');
@@ -38,3 +33,59 @@
     -fx-graphic: url('../Icon/UK3.png');
 }
 
+
+.USspeakButton {
+    -fx-graphic: url('../Icon/US.jpg');
+}
+
+.USspeakButton:hover {
+    -fx-graphic: url('../Icon/US.jpg');
+}
+
+.USspeakButton.active {
+    -fx-graphic: url('../Icon/US.jpg');
+}
+
+
+.list-view,
+.text-field,
+:showing {
+    -fx-background-color: #171d20;
+    -fx-text-fill: #bce4f9;
+
+}
+.list-view .list-cell {
+    -fx-background-color: #171d20;
+    -fx-text-fill: #bce4f9;
+}
+.list-view .scroll-bar {
+    -fx-opacity: 0;
+}
+.text-area {
+    -fx-text-fill: #bce4f9;
+    -fx-background-color: #171d20;
+
+    -fx-padding: 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0; /* Remove any border radius */
+}
+.text-area .content {
+    -fx-background-color: #171d20; /* Background color */
+
+}
+
+
+
+/*.text-area {*/
+/*    overflow:hidden;*/
+/*}*/
+
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+.text-area .scroll-bar:horizontal {
+    -fx-pref-height: 1;
+    -fx-opacity: 0;
+}

@@ -15,19 +15,99 @@
     -fx-background-color: #1E2529;
 }
 
+.fifth-color {
+    -fx-background-color: #414d53;
+}
+
 
 /* lỡ rồi */
 .padding-pane {
     -fx-background-radius: 10 0 0 10; /* Đặt bán kính của góc (trên bên trái) */
+
 }
 
-.rounded-pane {
+.rounded-pane1 {
     -fx-background-radius: 10; /* Đặt bán kính của góc */
+    -fx-background-color: #bce4f9;
 }
-
+.rounded-pane2 {
+    -fx-background-radius: 10; /* Đặt bán kính của góc */
+    -fx-background-color: #414d53;
+}
 .top-right-rounded-pane {
     -fx-background-radius: 0 10 0 0; /* Đặt bán kính của góc (trên bên trái) */
 }
 
 
 
+/** {*/
+/*    -fx-my-menu-color: #171d20;                  !* Change according to your needs *!*/
+/*    -fx-my-menu-color-highlighted: #414d53;      !* Change according to your needs *!*/
+/*    -fx-my-menu-font-color: #bce4f9;             !* Change according to your needs *!*/
+/*    -fx-my-menu-font-color-highlighted: #bce4f9; !* Change according to your needs *!*/
+/*}*/
+
+.menu-button
+{
+    -fx-background-color: #414d53;
+    -fx-font-size: 17px;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-weight: bold;
+}
+.menu-button .label {
+    -fx-text-fill: #bce4f9;
+}
+/*.menu-item, :focused {*/
+/*    -fx-background-color: #414d53;*/
+/*    -fx-font-size: 17px;*/
+/*    -fx-font-family: "Distefano Sans Bold";*/
+/*}*/
+.menu-item:focused {
+    -fx-background-color: #2a3439;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+    -fx-font-family: "Distefano Sans Bold";
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #bce4f9;
+}
+
+.context-menu {
+    -fx-background-color: #2a3439;
+}
+
+
+/*.menu-button,*/
+/*:showing {*/
+/*    -fx-background-color: #414d53;*/
+/*    -fx-text-fill: #bce4f9;*/
+/*    -fx-font-family: "Distefano Sans Bold";*/
+/*}*/
+
+
+
+
+#newGamebutton {
+    -fx-graphic: url('../Icon/newgame.png');
+}
+
+#newGamebutton:hover {
+    -fx-graphic: url('../Icon/newgame.png');
+}
+
+#newGamebutton:pressed {
+    -fx-graphic: url('../Icon/newgame.png');
+}
+
+.hint {
+    -fx-graphic: url('../Icon/newgame.png');
+}
+
+.hint:hover {
+    -fx-graphic: url('../Icon/newgame.png');
+}
+
+.hint:pressed {
+    -fx-graphic: url('../Icon/newgame.png');
+}

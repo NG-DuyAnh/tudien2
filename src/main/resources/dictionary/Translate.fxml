@@ -10,15 +10,15 @@
 <AnchorPane prefHeight="798.0" prefWidth="825.0" stylesheets="@../css/translate.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.TranslateController">
    <children>
       <TextArea fx:id="BeTranslated" layoutX="28.0" layoutY="125.0" prefHeight="633.0" prefWidth="374.0" />
-      <TextField fx:id="TranslatedFrom" layoutX="422.0" layoutY="125.0" prefHeight="633.0" prefWidth="374.0" />
-      <HBox alignment="BASELINE_CENTER" layoutX="202.0" layoutY="23.0" prefHeight="37.0" prefWidth="421.0">
+      <TextField fx:id="TranslatedFrom" alignment="TOP_LEFT" editable="false" layoutX="422.0" layoutY="125.0" prefHeight="633.0" prefWidth="374.0" />
+      <HBox alignment="BASELINE_CENTER" layoutX="202.0" layoutY="23.0" prefHeight="37.0" prefWidth="421.0" spacing="5.0">
          <children>
             <ChoiceBox fx:id="LanguageBeTranslated" prefHeight="37.0" prefWidth="201.0" />
-            <Button fx:id="TranslateButton" mnemonicParsing="false" onAction="#translateButtonClicked" prefHeight="37.0" prefWidth="107.0" text="Button" />
+            <Button fx:id="TranslateButton" mnemonicParsing="false" onAction="#translateButtonClicked" prefHeight="37.0" prefWidth="107.0" />
             <ChoiceBox fx:id="LanguageTranslateFrom" prefHeight="37.0" prefWidth="201.0" />
          </children>
       </HBox>
-      <Button fx:id="SpeakBeTranslated" layoutX="28.0" layoutY="88.0" mnemonicParsing="false" onAction="#HandleBeTranslatedspeakButton" text="Button" />
-      <Button fx:id="SpeakTranslatedFrom" layoutX="422.0" layoutY="88.0" mnemonicParsing="false" onAction="#HandleTranslatedFromspeakButton" text="Button" />
+      <Button fx:id="SpeakBeTranslated" layoutX="28.0" layoutY="76.0" mnemonicParsing="false" onAction="#HandleBeTranslatedspeakButton" />
+      <Button fx:id="SpeakTranslatedFrom" layoutX="760.0" layoutY="76.0" mnemonicParsing="false" onAction="#HandleTranslatedFromspeakButton" />
    </children>
 </AnchorPane>

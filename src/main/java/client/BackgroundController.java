@@ -160,7 +160,7 @@ public class BackgroundController   implements Initializable {
 
         SearchButton.getStyleClass().add("active");
         mainContent.getChildren().setAll(searchPane);
-    }
+    }   
 
 
 }

@@ -98,3 +98,54 @@
 98, What is the past tense of 'find'?, a. Finded, b. Found, c. Founded, d. Finding, b
 99, What is the opposite of 'beautiful'?, a. Ugly, b. Attractive, c. Pretty, d. Handsome, a
 100, Which word means 'a person who studies ancient societies'?, a. Archaeologist, b. Geologist, c. Historian, d. Philosopher, a
+100. What is the synonym for 'fear'? a. Courage, b. Terror, c. Joy, d. Excitement.
+101. Which word means 'a person who studies the stars and celestial objects'? a. Biologist, b. Astronomer, c. Geologist, d. Chemist.
+102. What is the plural form of 'goose'? a. Gooses, b. Geeses, c. Goosies, d. Geese.
+103. What is the opposite of 'big'? a. Small, b. Huge, c. Massive, d. Enormous.
+104. Which word means 'a person who plays a musical instrument'? a. Singer, b. Dancer, c. Musician, d. Conductor.
+105. What is the synonym for 'fast'? a. Slow, b. Rapid, c. Delayed, d. Slack.
+106. Which word means 'a person who believes in no god or higher power'? a. Theist, b. Atheist, c. Agnostic, d. Spiritualist.
+107. What is the past tense of 'run'? a. Runned, b. Ran, c. Ranned, d. Running.
+108. Which word describes a fear of heights? a. Acrophobia, b. Arachnophobia, c. Claustrophobia, d. Hydrophobia.
+109. What is the plural of 'tooth'? a. Tooths, b. Teeths, c. Toothes, d. Teeth.
+110. Which word means 'a person who studies the behavior of society'? a. Economist, b. Sociologist, c. Psychologist, d. Anthropologist.
+111. What is the opposite of 'empty'? a. Full, b. Vacant, c. Hollow, d. Sparse.
+112. What is the synonym for 'generous'? a. Selfish, b. Stingy, c. Benevolent, d. Greedy.
+113. Which word means 'a person who designs buildings'? a. Architect, b. Engineer, c. Contractor, d. Surveyor.
+114. What is the plural form of 'knife'? a. Knifes, b. Knives, c. Knivees, d. Knive.
+115. Which word means 'a person who acts in a play or movie'? a. Director, b. Producer, c. Actor, d. Stagehand.
+116. What is the synonym for 'tired'? a. Energetic, b. Weary, c. Exhausted, d. Refreshed.
+117. Which word means 'a person who studies rocks and minerals'? a. Zoologist, b. Geologist, c. Botanist, d. Archaeologist.
+118. What is the past tense of 'swim'? a. Swam, b. Swimmed, c. Swimming, d. Swum.
+119. Which word describes a fear of water? a. Aquaphobia, b. Claustrophobia, c. Arachnophobia, d. Acrophobia.
+120. What is the plural of 'cactus'? a. Cactuses, b. Cacti, c. Cactusies, d. Cactee.
+121. Which word means 'a person who studies the origin and history of words'? a. Linguist, b. Etymologist, c. Grammarian, d. Lexicographer.
+122. What is the opposite of 'beautiful'? a. Ugly, b. Pretty, c. Gorgeous, d. Attractive.
+123. What is a group of lions called? a. Pack, b. Pride, c. Flock, d. Herd.
+124. Which word means 'a person who works with numbers and calculations'? a. Artist, b. Mathematician, c. Scientist, d. Writer.
+125. What is the synonym for 'sad'? a. Happy, b. Depressed, c. Gloomy, d. Content.
+126. Which word means 'a person who studies the mind and behavior'? a. Biologist, b. Psychologist, c. Physicist, d. Chemist.
+127. What is the plural form of 'tomato'? a. Tomatos, b. Tomatoes, c. Tomatees, d. Tomate.
+128. What is the opposite of 'hot'? a. Cold, b. Warm, c. Boiling, d. Scorching.
+129. Which word means 'a person who works with wood and builds things'? a. Mechanic, b. Plumber, c. Carpenter, d. Electrician.
+130. What is the synonym for 'brilliant'? a. Dull, b. Clever, c. Stupid, d. Smart.
+131. Which word means 'a person who studies the behavior of animals'? a. Zoologist, b. Botanist, c. Geologist,131. Which word means 'a person who studies the behavior of animals'? a. Zoologist, b. Botanist, c. Geologist, d. Anthropologist.
+132. What is the past tense of 'eat'? a. Eated, b. Ate, c. Eaten, d. Eating.
+133. Which word describes a fear of heights? a. Acrophobia, b. Arachnophobia, c. Claustrophobia, d. Hydrophobia.
+134. What is the plural of 'child'? a. Childs, b. Childrens, c. Childes, d. Children.
+135. Which word means 'a person who explores outer space'? a. Astronomer, b. Cosmonaut, c. Astronaut, d. Explorer.
+136. What is the synonym for 'loud'? a. Quiet, b. Noisy, c. Silent, d. Calm.
+137. Which word means 'a person who studies the structure of the Earth's crust'? a. Biologist, b. Geologist, c. Chemist, d. Physicist.
+138. What is the opposite of 'arrive'? a. Leave, b. Depart, c. Exit, d. Come.
+139. Which word means 'a person who writes poems'? a. Author, b. Poet, c. Novelist, d. Playwright.
+140. What is the plural form of 'mouse' (the animal)? a. Mouses, b. Mice, c. Mousies, d. Micees.
+141. Which word means 'a person who studies the past and historical events'? a. Historian, b. Archaeologist, c. Geographer, d. Sociologist.
+142. What is the synonym for 'smart'? a. Dumb, b. Intelligent, c. Stupid, d. Ignorant.
+143. Which word means 'a person who works with metals and shapes them'? a. Mechanic, b. Plumber, c. Blacksmith, d. Welder.
+144. What is the plural of 'deer'? a. Deers, b. Deeres, c. Deer, d. Deeses.
+145. Which word means 'a person who studies the mind and mental processes'? a. Biologist, b. Psychologist, c. Physicist, d. Chemist.
+146. What is the opposite of 'empty'? a. Full, b. Vacant, c. Hollow, d. Sparse.
+147. What is a group of birds called? a. Pack, b. Pride, c. Flock, d. Herd.
+148. Which word means 'a person who works with computers and programming'? a. Teacher, b. Engineer, c. Programmer, d. Scientist.
+149. What is the synonym for 'excited'? a. Bored, b. Enthusiastic, c. Indifferent, d. Apathetic.
+150. Which word means 'a person who studies the structure and properties of matter'? a. Biologist, b. Chemist, c. Physicist, d. Geologist.

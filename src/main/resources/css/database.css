@@ -14,3 +14,172 @@
 .forth-color {
     -fx-background-color: #1E2529;
 }
+
+
+.grid,
+.top-toolbar,
+.html-editor-cut,
+.html-editor-copy,
+.html-editor-paste,
+.html-editor-align-left,
+.html-editor-align-right,
+.html-editor-align-center,
+.html-editor-align-justify,
+.html-editor-outdent,
+.html-editor-indent,
+.html-editor-bullets,
+.html-editor-numbers,
+.bottom-toolbar,
+    /*.format-menu-button,*/
+    /*.font-family-menu-button,*/
+    /*.font-size-menu-button,*/
+.html-editor-bold,
+.html-editor-italic,
+.html-editor-underline,
+.html-editor-strike,
+.html-editor-hr,
+.html-editor-foreground,
+.html-editor-background {
+    -fx-background-color: #383838;
+}
+
+/*.web-view {*/
+/*    -fx-background-color: linear-gradient(#111111 0%, #222222 25%, #333333 75%, #444444 100%);*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+
+
+/*.list-view,*/
+/*.text-field,*/
+/*:showing{*/
+/*    -fx-base: #b72424 ;*/
+/*}*/
+
+.format-menu-button-ComboBox,
+.font-family-menu-button-ComboBox,
+.font-size-menu-button-ComboBox
+ {
+    -fx-background-color: #414d53;
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+}
+.format-menu-button-ComboBox,
+.font-family-menu-button-ComboBox,
+.font-size-menu-button-ComboBox,
+:focused {
+    -fx-background-color: #414d53;
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+}
+
+.format-menu-button-ComboBox,
+.font-family-menu-button-ComboBox,
+.font-size-menu-button-ComboBox,
+:showing {
+    -fx-base: #414d53;
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+}
+
+.format-menu-button-ComboBox,
+.font-family-menu-button-ComboBox,
+.font-size-menu-button-ComboBox,
+:hover {
+
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+}
+
+
+
+
+
+/*.format-menu-button,*/
+/*.font-family-menu-button,*/
+/*.font-size-menu-button, >  .label :showing {*/
+/*    -fx-text-fill: #bce4f9;*/
+/*}*/
+
+
+
+.format-menu-button,
+.font-family-menu-button,
+.font-size-menu-button, > .arrow-button {
+    -fx-padding: 0;
+
+}
+
+.format-menu-button,
+.font-family-menu-button,
+.font-size-menu-button,> .arrow-button > .arrow {
+    -fx-padding: 0;
+
+}
+
+
+
+.combo-box .text-input {
+    -fx-base: #414d53; /* Background color */
+    -fx-text-fill: #bce4f9; /* Text color */
+    -fx-font-family: "Distefano Sans Bold"; /* Font family */
+}
+
+/* Styling the items in the dropdown */
+.combo-box .list-cell {
+    -fx-base: #414d53; /* Background color */
+    -fx-text-fill: #bce4f9; /* Text color */
+    -fx-font-family: "Distefano Sans Bold"; /* Font family */
+}
+
+/* Styling the popup */
+.combo-box .combo-box-popup {
+    -fx-base: #414d53; /* Background color */
+    -fx-text-fill: #bce4f9; /* Text color */
+}
+
+
+
+
+.list-view,
+.text-field,
+:showing {
+    -fx-background-color: #171d20;
+    -fx-text-fill: #bce4f9;
+
+}
+.list-view .list-cell {
+    -fx-background-color: #171d20;
+    -fx-text-fill: #bce4f9;
+}
+.list-view .scroll-bar {
+    -fx-opacity: 0;
+}
+.text-area {
+    -fx-text-fill: #bce4f9;
+    -fx-background-color: #171d20;
+
+    -fx-padding: 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0; /* Remove any border radius */
+}
+.text-area .content {
+    -fx-background-color: #171d20; /* Background color */
+
+}
+
+
+
+/*.text-area {*/
+/*    overflow:hidden;*/
+/*}*/
+
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+.text-area .scroll-bar:horizontal {
+    -fx-pref-height: 1;
+    -fx-opacity: 0;
+}
