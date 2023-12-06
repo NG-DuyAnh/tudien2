@@ -183,3 +183,69 @@
     -fx-pref-height: 1;
     -fx-opacity: 0;
 }
+
+.button-add {
+    -fx-graphic: url('../Icon/add.png');
+}
+
+.button-add:hover {
+    -fx-graphic: url('../Icon/add.png');
+}
+
+.button-add:pressed {
+    -fx-graphic: url('../Icon/add.png');
+}
+.button-add:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.button-remove {
+    -fx-graphic: url('../Icon/remove2.png');
+}
+
+.button-remove:hover {
+    -fx-graphic: url('../Icon/remove2.png');
+}
+
+.button-remove:pressed {
+    -fx-graphic: url('../Icon/remove2.png');
+}
+.button-remove:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.button-edit {
+    -fx-graphic: url('../Icon/edt.png');
+}
+
+.button-edit:hover {
+    -fx-graphic: url('../Icon/edt.png');
+}
+
+.button-edit:pressed {
+    -fx-graphic: url('../Icon/edt.png');
+}
+.button-edit:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}

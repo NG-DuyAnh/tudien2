@@ -26,7 +26,9 @@ public class VoiceRSS {
 
 
 
-    // vì đây là static
+    // !vì đây là static
+    // !xử lí lấy thông tin từ api
+    // !CÁC THUỘC TÍNH CỦA GIOỌNG NÓI Ở TRANG WEB https://www.voicerss.org/api/
     public static void speakWord(String word) throws Exception {
         VoiceProvider tts = new VoiceProvider(API_KEY);
         VoiceParameters params = new VoiceParameters(word, language);
@@ -51,7 +53,7 @@ public class VoiceRSS {
 
 
 
-
+    // !xử lí phát ra tiếng nói
     public static void playAudio(byte[] audioData) {
         try {
             // Chuyển đổi dữ liệu âm thanh từ byte array

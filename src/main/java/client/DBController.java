@@ -34,7 +34,7 @@ public class DBController extends UtilitiesController implements Initializable {
     @FXML
     private HTMLEditor Editor;
 
-
+    //!thừ kế từ ultilites chỉnh sửa chút ít để có được background của webview
     public void initialize(URL url, ResourceBundle resourceBundle) {
         super.initialize(url, resourceBundle);
         setDefaultEditorBackground();
@@ -47,6 +47,7 @@ public class DBController extends UtilitiesController implements Initializable {
 //        Editor.setHtmlText("<html><body style=\"background-color: #" + defaultBackgroundColor + ";\"></body></html>");
 //    }
 
+    // !được làm riêng do sử dụng htmleditor
     private void setDefaultEditorBackground() {
         // Lấy màu nền mặc định từ thuộc tính pageFillProperty
         String defaultBackgroundColor = pageFillProperty.get().toString().substring(2, 8);
@@ -60,7 +61,7 @@ public class DBController extends UtilitiesController implements Initializable {
 
 
 
-
+    // !hiện nghĩa trong html editor
     @FXML
     public void showDefinitionInEditor(MouseEvent event) {
         selectedWord = listView.getSelectionModel().getSelectedItem();
@@ -79,6 +80,8 @@ public class DBController extends UtilitiesController implements Initializable {
 
         }
     }
+
+
 
     @FXML
     public void handleAddWord(ActionEvent event){
@@ -102,6 +105,7 @@ public class DBController extends UtilitiesController implements Initializable {
         htmlDictionary.updateWord(newWord,newMeaning);
         htmlDictionary.updateWordListtoHTMLfile(Path, htmlDictionary.getWordList());
         updateSearchResults();
+        setDefaultEditorBackground();
 
 
     }
@@ -116,24 +120,38 @@ public class DBController extends UtilitiesController implements Initializable {
 
             // Optionally, clear the editor after saving
             Editor.setHtmlText("");
+            setDefaultEditorBackground();
         } else {
             // Show an alert indicating that no word is selected or the edited meaning is empty
             showAlert("Error", "No word selected or edited meaning is empty");
         }
+
     }
 
-    public void handleRemoveWord (ActionEvent event){
-        if(selectedWord == null){
-            showAlert("Error", "No word selected");
+
+
+    public void handleRemoveWord(ActionEvent event) {
+        if (selectedWord == null) {
+            showAlert2("Error", "No word selected to remove.");
             return;
         }
+
         htmlDictionary.removeWord(selectedWord);
         htmlDictionary.updateWordListtoHTMLfile(Path, htmlDictionary.getWordList());
         Editor.setHtmlText("");
         searchBar.clear();
         listView.getItems().clear();
+        setDefaultEditorBackground();
     }
 
+
+    private void showAlert2(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 
     private void showAlert(String title, String content){
         Alert alert = new Alert(Alert.AlertType.ERROR, content, ButtonType.OK);

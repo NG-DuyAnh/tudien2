@@ -55,7 +55,7 @@ public class EXBackgroundController extends EX implements Initializable {
     @FXML
     private Button settingButton;
 
-
+    // !xử lí chuyển pane
     public void showSearchPane() {
         showThePane(mainContent, searchPane);
         searchController.updateButtonsVisibility() ;
@@ -78,7 +78,7 @@ public class EXBackgroundController extends EX implements Initializable {
     }
 
 
-
+    // !load sẵn pane
     public void initialize(URL location, ResourceBundle resources) {
 
         FXMLLoader translateLoader = initializeController("/dictionary/Translate.fxml");

@@ -38,14 +38,14 @@ public class SearchController extends UtilitiesController implements Initializab
 
 
 
-
+    //!thừ kế từ ultilites chỉnh sửa chút ít để có được background của webview
     public void initialize(URL url, ResourceBundle resourceBundle) {
         super.initialize(url, resourceBundle); // Call the superclass's initialize method
         setDefaultBackground();
     }
 
 
-
+    // !NHƯ TÊN, set màu cho webview
     private void setDefaultBackground() {
         // Set màu nền mặc định cho definitionView
         String defaultBackgroundColor = pageFillProperty.get().toString().substring(2, 8);
@@ -55,22 +55,18 @@ public class SearchController extends UtilitiesController implements Initializab
 
 
 
-    public void handleClickListView() {
-        selectedWord = listView.getSelectionModel().getSelectedItem();
-        if (selectedWord != null) {
-            // Xử lý từ đã được chọn, ví dụ: hiển thị nghĩa của từ
-            String meaning = htmlDictionary.getWordList().get(selectedWord);
-            definitionView.getEngine().loadContent(meaning);
-        }
-    }
+
 
 
     public void ShowThesaurusinBothTField(String selectedWord) {
         new Thread(() -> {
             try {
+                // Convert selectedWord to lowercase and replace spaces with hyphens
+                String formattedWord = selectedWord.toLowerCase().replace(" ", "-");
+
                 ThesaurusApi thesaurusApi = new ThesaurusApi();
-                ArrayList<String> synonyms = thesaurusApi.getSynonyms(selectedWord);
-                ArrayList<String> antonyms = thesaurusApi.getAntonyms(selectedWord);
+                ArrayList<String> synonyms = thesaurusApi.getSynonyms(formattedWord);
+                ArrayList<String> antonyms = thesaurusApi.getAntonyms(formattedWord);
 
                 // Run UI updates on the JavaFX application thread
                 Platform.runLater(() -> {
@@ -98,6 +94,19 @@ public class SearchController extends UtilitiesController implements Initializab
     }
 
 
+
+
+//    public void handleClickListView() {
+//        selectedWord = listView.getSelectionModel().getSelectedItem();
+//        if (selectedWord != null) {
+//            // Xử lý từ đã được chọn, ví dụ: hiển thị nghĩa của từ
+//            String meaning = htmlDictionary.getWordList().get(selectedWord);
+//            definitionView.getEngine().loadContent(meaning);
+//        }
+//    }
+
+
+    //! xử lý hiện nghĩa của từ sang webview
     public void showDefinitionInWebView() {
         selectedWord = listView.getSelectionModel().getSelectedItem();
         if (selectedWord != null) {
@@ -118,42 +127,40 @@ public class SearchController extends UtilitiesController implements Initializab
 
 
 
-    // ! CAY LẮM, CAY ƠI là CAY. trình độ không đủ để tạo code convert DB gốc sang DB HTML theo ý muốn riêng. VÌ thế, method này là method chữa cháy cho DB HTML của project này.
-    // ! Method sau chuyển các từ chưa được chuyển màu trong DB HTML thành màu ta yêu cầu.
-    // TODO: tìm cách Overwrite toàn bộ! chắc impossible
 
-    // ! GIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE LÀM ĐC RỒI ctrl + / trong nước mắt và tiếng cười
+    //?phương thức bây giờ không cần thiết do đã làm chủ  !DATABASE!
+    //public void showDefinitionInWebView() {
+    //    String selectedWord = listView.getSelectionModel().getSelectedItem();
+    //    if (selectedWord != null) {
+    //        String meaning = htmlDictionary.getWordList().get(selectedWord);
+    //        if (meaning != null) {
+    //            // Wrap the meaning content with a style to set the text color to blue
+    //            String styledContent = "<html><body>" + meaning + "</body></html>";
+    //
+    //            WebEngine webEngine = definitionView.getEngine();
+    //            webEngine.loadContent(styledContent, "text/html");
+    //
+    //            // Use JavaScript to change the color of all text to blue
+    //            webEngine.getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
+    //                if (newValue == Worker.State.SUCCEEDED) {
+    //                    webEngine.executeScript("document.body.style.color = '#aac9da';");
+    //                }
+    //            });
+    //        }
+    //    }
+    //}
 
 
-//public void showDefinitionInWebView() {
-//    String selectedWord = listView.getSelectionModel().getSelectedItem();
-//    if (selectedWord != null) {
-//        String meaning = htmlDictionary.getWordList().get(selectedWord);
-//        if (meaning != null) {
-//            // Wrap the meaning content with a style to set the text color to blue
-//            String styledContent = "<html><body>" + meaning + "</body></html>";
-//
-//            WebEngine webEngine = definitionView.getEngine();
-//            webEngine.loadContent(styledContent, "text/html");
-//
-//            // Use JavaScript to change the color of all text to blue
-//            webEngine.getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
-//                if (newValue == Worker.State.SUCCEEDED) {
-//                    webEngine.executeScript("document.body.style.color = '#aac9da';");
-//                }
-//            });
-//        }
+    // !KHÔNG CẦN NỮA
+//    public void initSearchListView() {
+//        listView.getItems().clear();
+//        searchBar.clear();
+//        definitionView.getEngine().loadContent("");
 //    }
-//}
-    public void initSearchListView() {
-        listView.getItems().clear();
-        searchBar.clear();
-        definitionView.getEngine().loadContent("");
-    }
 
 
 
-
+    // !XỬ LÝ TTS
     public void HandleUKspeakButton() throws Exception{
         if (voiceUK == null){
             voiceUK = "Harry";

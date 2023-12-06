@@ -17,7 +17,7 @@ public class ThesaurusApi {
     private static final String apiKey = "szRqvoNX7GWYv0xlrzDmnQ==v7GQMZ2TqDRR65wD";
 
 
-
+    // !CHUYỂN TỪ JSON sang data bình thường ??
     private ArrayList<String> getWordsFromJsonArray(JSONArray jsonArray) throws Exception {
         ArrayList<String> words = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -26,18 +26,24 @@ public class ThesaurusApi {
         return words;
     }
 
+
+    // !đồng nghĩa
     public ArrayList<String> getSynonyms(String word) throws Exception {
         JSONObject jsonResponse = getJsonResponse(word);
         JSONArray synonymsJson = jsonResponse.getJSONArray("synonyms");
         return getWordsFromJsonArray(synonymsJson);
     }
-
+    // !trái nghĩa
     public ArrayList<String> getAntonyms(String word) throws Exception {
         JSONObject jsonResponse = getJsonResponse(word);
         JSONArray antonymsJson = jsonResponse.getJSONArray("antonyms");
         return getWordsFromJsonArray(antonymsJson);
     }
 
+
+
+
+    //! xử lí lấy thông tin từ JSON do API của NINJA hoàn toàn từ JSON ???
     private JSONObject getJsonResponse(String word) throws Exception {
         String apiUrl = API_BASE_URL + "?word=" + word;
         URL url = new URL(apiUrl);
@@ -65,7 +71,7 @@ public class ThesaurusApi {
         ThesaurusApi thesaurusApi = new ThesaurusApi();
 
         // Set the word for this instance
-        thesaurusApi.word = "high church";
+        thesaurusApi.word = "jump-ball";
 
         // Call the getSynonyms method
         ArrayList<String> synonyms = thesaurusApi.getSynonyms(thesaurusApi.word);

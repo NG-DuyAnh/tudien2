@@ -101,13 +101,13 @@
 }
 
 .hint {
-    -fx-graphic: url('../Icon/newgame.png');
+    -fx-graphic: url('../Icon/hint.png');
 }
 
 .hint:hover {
-    -fx-graphic: url('../Icon/newgame.png');
+    -fx-graphic: url('../Icon/hint.png');
 }
 
 .hint:pressed {
-    -fx-graphic: url('../Icon/newgame.png');
+    -fx-graphic: url('../Icon/hint.png');
 }

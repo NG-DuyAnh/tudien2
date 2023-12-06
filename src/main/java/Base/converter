@@ -1,0 +1,118 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+void convertToHtml(const string &inputFile, const string &outputFile)
+{
+    ifstream file(inputFile);
+    if (!file.is_open())
+    {
+        cerr << "Error opening input file: " << inputFile << endl;
+        return;
+    }
+
+    ofstream htmlFile(outputFile);
+    if (!htmlFile.is_open())
+    {
+        cerr << "Error opening output file: " << outputFile << endl;
+        file.close();
+        return;
+    }
+
+    vector<string> lines;
+    string line;
+    while (getline(file, line))
+    {
+        lines.push_back(line);
+    }
+
+    bool insideStarBlock = false;
+    bool firstWord = true;
+
+    for (const auto &line : lines)
+    {
+        string trimmedLine = line;
+        // Trim leading and trailing whitespaces
+        size_t start = trimmedLine.find_first_not_of(" \t");
+        size_t end = trimmedLine.find_last_not_of(" \t");
+        if (start != string::npos && end != string::npos)
+        {
+            trimmedLine = trimmedLine.substr(start, end - start + 1);
+        }
+
+        if (trimmedLine.find('*') == 0)
+        {
+            if (!insideStarBlock)
+            {
+                htmlFile << "<li><b><i>" << trimmedLine.substr(1) << "</i></b><ul>";
+                insideStarBlock = true;
+            }
+            else
+            {
+                htmlFile << "</ul></li><li><b><i>" << trimmedLine.substr(1) << "</i></b><ul>";
+            }
+        }
+        else if (insideStarBlock && trimmedLine.empty())
+        {
+            htmlFile << "</ul></li>";
+            insideStarBlock = false;
+        }
+        else if (trimmedLine.find('!') == 0)
+        {
+            htmlFile << "<ul><li><font color=\"#0070b0\"><b>" << trimmedLine.substr(1) << "</b></font></li></ul>";
+        }
+        else if (trimmedLine.find('=') == 0)
+        {
+            htmlFile << "<ul><li><font color=\"#0070b0\"><b>" << trimmedLine.substr(1) << "</b></font></li></ul>";
+        }
+        else if (trimmedLine.find('@') == 0)
+        {
+            size_t spacePos = trimmedLine.find(' ');
+            size_t slashPos = trimmedLine.find('/');
+            string word = trimmedLine.substr(1, slashPos - 2); // get the whole word
+            if (firstWord)
+            {
+                htmlFile << word << "<html><i><font color=\"#bce4f9\">" << trimmedLine.substr(1) << "</i><br/>";
+                firstWord = false;
+            }
+            else
+            {
+                htmlFile << "\n"
+                         << word << "<html><i><font color=\"#bce4f9\">" << trimmedLine.substr(1) << "</i><br/>";
+            }
+        }
+        else if (trimmedLine.find('(') == 0)
+        {
+            htmlFile << "<ul><li><font color=\"#0070b0\"><b>" << trimmedLine.substr(1) << "</b></font><ul>";
+        }
+        else if (trimmedLine.find(')') == 0)
+        {
+            htmlFile << "</ul></li><font color=\"#bce4f9\"></ul>";
+        }
+        else if (trimmedLine.find('+') == 0)
+        {
+            htmlFile << "<li><b>" << trimmedLine.substr(1) << "</b>:";
+        }
+        else if (trimmedLine.find('-') == 0)
+        {
+            htmlFile << "<li>" << trimmedLine.substr(1) << "</li>";
+        }
+        else
+        {
+            htmlFile << line;
+        }
+    }
+
+    cout << "Conversion to HTML completed." << endl;
+}
+
+int main()
+{
+    string inputFile = "your_file.txt";
+    string outputFile = "output.txt";
+    convertToHtml(inputFile, outputFile);
+
+    return 0;
+}

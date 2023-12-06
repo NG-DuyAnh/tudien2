@@ -72,13 +72,13 @@
 
                                         /* ?          individual BUTTON             */
 .button-search {
-    -fx-graphic: url('../Icon/search.png');
+    -fx-graphic: url('../Icon/tìm.png');
 }
 .button-search:hover {
-    -fx-graphic: url('../Icon/search.png');
+    -fx-graphic: url('../Icon/tìm.png');
 }
 .button-search:pressed {
-    -fx-graphic: url('../Icon/search.png');
+    -fx-graphic: url('../Icon/tìm.png');
 }
 .button-search:focused {
     /* * sau khi ấn, ấn button khác thì "unfocused"  */
@@ -94,13 +94,13 @@
 
 
 .button-translate {
-    -fx-graphic: url('../Icon/translate.png');
+    -fx-graphic: url('../Icon/GOOGGLE.png');
 }
 .button-translate:hover {
-    -fx-graphic: url('../Icon/translate.png');
+    -fx-graphic: url('../Icon/GOOGGLE.png');
 }
 .button-translate:pressed {
-    -fx-graphic: url('../Icon/translate.png');
+    -fx-graphic: url('../Icon/GOOGGLE.png');
 }
 .button-translate:focused {
     /* * sau khi ấn, ấn button khác thì "unfocused"  */
@@ -137,13 +137,13 @@
 
 
 .button-Database {
-    -fx-graphic: url('../Icon/BD1.png');
+    -fx-graphic: url('../Icon/DB10.png');
 }
 .button-Database:hover {
-    -fx-graphic: url('../Icon/BD1.png');
+    -fx-graphic: url('../Icon/DB10.png');
 }
 .button-Database:pressed {
-    -fx-graphic: url('../Icon/BD1.png');
+    -fx-graphic: url('../Icon/DB10.png');
 }
 .button-Database:focused {
     /* * sau khi ấn, ấn button khác thì "unfocused"  */
@@ -157,5 +157,25 @@
 }
 
 
+.button-setting {
+    -fx-graphic: url('../Icon/database.png');
+}
 
+.button-setting:hover {
+    -fx-graphic: url('../Icon/database.png');
+}
+
+.button-setting:pressed {
+    -fx-graphic: url('../Icon/database.png');
+}
+.button-setting:focused {
+    /* * sau khi ấn, ấn button khác thì "unfocused"  */
+    background-color: #414d53;
+    -fx-background-color: #414d53;
+    /*-fx-background-radius: 10px;*/
+    -fx-text-fill: #bce4f9;
+    -fx-font-family: "Distefano Sans Bold";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
 

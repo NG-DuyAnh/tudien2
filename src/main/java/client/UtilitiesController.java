@@ -40,9 +40,9 @@ public class UtilitiesController implements Initializable {
     protected static HTMLDictionary htmlDictionary = new HTMLDictionary();
 
 
-    protected static final String EVPath = "F:\\Dictionary\\src\\main\\resources\\DB\\eng_vie.txt"  ;
+    protected static final String EVPath = "F:\\Dictionary\\src\\main\\resources\\DB\\engvie.txt"  ;
 
-    protected static final String VEPath = "F:\\Dictionary\\src\\main\\resources\\DB\\vie_eng.txt" ;
+    protected static final String VEPath = "F:\\Dictionary\\src\\main\\resources\\DB\\vieeng.txt" ;
 
     protected static String Path ;
 
@@ -67,19 +67,14 @@ public class UtilitiesController implements Initializable {
     protected String selectedWord;
 
 
-
+    // !sử dụng cho mục đích đổi màu background cho webview của search
     protected final ObjectProperty<Color> pageFillProperty = new SimpleObjectProperty<>(Color.web("#171d20"));
-
-
-
     public ObjectProperty<Color> pageFillProperty() {
         return pageFillProperty;
     }
-
     public Color getPageFill() {
         return pageFillProperty.get();
     }
-
     public void setPageFill(Color color) {
         pageFillProperty.set(color);
     }
@@ -88,7 +83,7 @@ public class UtilitiesController implements Initializable {
 
 
 
-    //TODO: tìm hiểu sao lại có intiialize ở background và các lớp con của lớp này
+    // !phương thức cha dành cho search và DB controller. 2 class còn lại thì riêng hoàn toàn
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Path = EVPath;
         VietAnh.setVisible(false);
@@ -110,16 +105,17 @@ public class UtilitiesController implements Initializable {
 
 
 
-    // ! xử lí tìm kiếm (SEARCH)
+
 //    public void updateSearchResults() {
 //        listView.getItems().clear();
 //        List<String> searchResults = searchList(searchBar.getText(), htmlDictionary.getWordList());
 //        listView.getItems().addAll(searchResults);
 //    }
 
-    // mỗi lần nhập từ thì update
+    // !mỗi lần nhập từ thì sẽ update search
     public void updateSearchResults() {
         String searchInput = searchBar.getText();
+        searchInput = searchInput.replaceAll("\\s", "");
         if (!searchInput.isEmpty()) {
             listView.getItems().clear();
             List<String> searchResults = searchList(searchInput, htmlDictionary.getWordList());
@@ -132,6 +128,7 @@ public class UtilitiesController implements Initializable {
 
 
     // TODO: có vid xem lại youtube để hiểu rõ hơn, quên rồi
+    // ! xử lí tìm kiếm (SEARCH)
     public List<String> searchList(String searchWords, TreeMap<String, String> wordMap) {
         return wordMap.entrySet().stream()
                 .filter(entry -> entry.getKey().toLowerCase().startsWith(searchWords.toLowerCase()))
@@ -139,9 +136,10 @@ public class UtilitiesController implements Initializable {
                 .collect(Collectors.toList());
     }
 
-    // !click vào từ sẽ hiện meaning của nó
 
 
+
+    // !xử lí TTS, Rât quan trọng vì phương thức này được thừa kế bỏi lớp con
     public void GeneralhandleSpeakButton(String language, String textToSpeak, String Voice) throws Exception {
         // !set người nói ở controller riêng
         //! hoặc không cần vì nếu ko set voice thì nó để mặc định khi chỉnh language
@@ -170,6 +168,8 @@ public class UtilitiesController implements Initializable {
 //        }).start();
 //    }
 
+
+    //! đổi DB việt-anh <-> anh-việt thừa kế chung bỏi search và DB
     @FXML
     public void handleVietAnhButton() {
         VietAnh.setVisible(false);
@@ -192,6 +192,11 @@ public class UtilitiesController implements Initializable {
         listView.getItems().clear();
     }
 
+
+
+
+
+    // !sync DB và search  button đổi DB
     public void updateButtonsVisibility() {
         if (Path.equals(EVPath)) {
             VietAnh.setVisible(false);

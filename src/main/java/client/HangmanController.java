@@ -4,6 +4,7 @@ import Game.Hangman;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
@@ -97,7 +98,7 @@ public class HangmanController    {
 
     String difficulty = "easy"; // default to easy
 
-
+    private boolean hintAlertShown = false;
 
     public void initialize() {
         Box.setVisible(false);
@@ -188,7 +189,7 @@ public class HangmanController    {
 //    }
 
 
-
+    // !XỬ LÍ CHỨC NĂNG GAME MỚI
     public void newGame(){
         for(int i=0; i<26; i++){
             alphabet.getChildren().get(i).setDisable(false);
@@ -201,36 +202,54 @@ public class HangmanController    {
 
 
 
-
+    //! xử lí CHỨC NĂNG HINT, LƯU Ý CHỈ ĐƯỢC SỬ DỤNG 1 LẦN
     public void hint(ActionEvent event) {
         // !chưa sử dụng hint, mistake < 7 và nhở hơn từ cần tìm
-        if (!hintUsed && mistakes < 7 && correct < myWord.length() - 1 ) {
+        if (!hintUsed && mistakes < 7 && correct < myWord.length() - 1) {
 
             int hiddenIndex = findFirstHiddenLetter();
 
-            // If there is a hidden letter, reveal it
+            // Nếu có hidden letter, hiện ra
             if (hiddenIndex != -1) {
                 answer.set(hiddenIndex, myLetters.get(hiddenIndex / 2));
                 String res = String.join("", answer);
                 currText.setText(res);
             } else {
-                // If no hidden letter is found, do nothing (you can add a message or handle this case differently)
+                // nếu không có hidden letter hiện alert
+                if (!hintAlertShown) {
+                    showAlert("No Hidden Letter", "There are no hidden letters to reveal.");
+                    hintAlertShown = true;
+                }
+                return; // Exit the method tránh xử lí thêm
             }
 
-            // Increase mistake count
+            // đếm mistake
             mistakes++;
 
-            // Update UI based on mistake count
+            // xử lí số mạng
             updateUI();
 
-            // Set hintUsed to true
+            // Set hintUsed sang true
             hintUsed = true;
         } else {
-            // If the hint has already been used, the maximum mistakes have been reached, or it's the last correct letter, do nothing (you can add a message or handle this case differently)
+            // nếu đã sử dụng hint thì hiện alert
+            if (!hintAlertShown) {
+                showAlert("Cannot Use Hint", "You only use hint once!");
+                hintAlertShown = true;
+            }
         }
     }
 
-    // !hàm tìm từ đầu tiên của "từ cần đoán"
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+
+    // !hàm tìm từ đầu tiên của "từ cần đoán", DÀNH RIÊNG CHO PHƯƠNG THỨC "hint"
     private int findFirstHiddenLetter() {
         for (int i = 0; i < answer.size(); i += 2) {
             if (answer.get(i).equals("_")) {
@@ -241,7 +260,7 @@ public class HangmanController    {
     }
 
 
-
+    //! hàm xử lí số mạng tương ứng với mỗi lân true
     private void updateUI() {
         switch (mistakes) {
             case 1:
@@ -300,7 +319,5 @@ public class HangmanController    {
         }
     }
 
-    public AnchorPane getRootPane(AnchorPane rootPane) {
-        return rootPane;
-    }
+
 }

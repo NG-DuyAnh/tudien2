@@ -32,10 +32,10 @@
       </AnchorPane>
       <HBox alignment="CENTER" layoutX="320.0" layoutY="21.0" prefHeight="44.0" prefWidth="137.0" spacing="5.0">
          <children>
-            <Button fx:id="addWord" mnemonicParsing="false" onAction="#handleAddWord" prefHeight="44.0" prefWidth="60.0" text="add" />
-            <Button fx:id="RemoveWord" mnemonicParsing="false" onAction="#handleRemoveWord" prefHeight="44.0" prefWidth="61.0" text="remove" />
+            <Button fx:id="addWord" mnemonicParsing="false" onAction="#handleAddWord" prefHeight="44.0" prefWidth="60.0" styleClass="button-add" />
+            <Button fx:id="RemoveWord" mnemonicParsing="false" onAction="#handleRemoveWord" prefHeight="44.0" prefWidth="61.0" styleClass="button-remove" />
          </children>
       </HBox>
-      <Button fx:id="SaveEdit" layoutX="683.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleSaveEdit" prefHeight="50.0" prefWidth="60.0" text="save" />
+      <Button fx:id="SaveEdit" layoutX="683.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleSaveEdit" prefHeight="50.0" prefWidth="60.0" styleClass="button-edit" />
    </children>
 </AnchorPane>

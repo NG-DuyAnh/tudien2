@@ -30,7 +30,7 @@ public class SettingController extends UtilitiesController implements Initializa
     private String[] ZHoption = {"Luli", "Shu", "Chow", "Wang"};
 
 
-
+    // !xử lí chọn từ cho các tts
     public void initialize(URL location, ResourceBundle resources) {
 
         System.out.println("SettingController initialized");

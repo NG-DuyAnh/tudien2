@@ -9,6 +9,9 @@ import java.net.URLEncoder;
 
 public class GoogleTranlate {
 
+
+
+    // !xử lí google translate
     public static String googleTranslate(String langFrom, String langTo, String text) throws IOException {
 
         // *APP SCRIPT  (ME(GMAIL) + everyone)

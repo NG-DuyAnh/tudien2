@@ -8,12 +8,12 @@ import javafx.scene.layout.AnchorPane;
 public class EX  {
 
 
-
+    //! xử lí hiện pane
     public void showThePane (AnchorPane mainContent, AnchorPane ThePane){
         mainContent.getChildren().setAll(ThePane);
     }
 
-
+    //! xử lí load sẵn
     public FXMLLoader initializeController(String fxmlPath) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
@@ -38,4 +38,6 @@ public class EX  {
 //        //translateController.initSearchListView(); //reset lại pane khi quay trở lại
 //        setMainContent(translatePane);
 //    }
+
+
 }

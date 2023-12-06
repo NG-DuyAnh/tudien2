@@ -21,8 +21,9 @@ public class TranslateController extends UtilitiesController implements Initiali
     // ?ô ghi từ và hiện từ
     @FXML
     private TextArea BeTranslated;
+
     @FXML
-    private TextField TranslatedFrom;
+    private TextArea TranslatedFrom;
 
 
     @FXML
@@ -47,7 +48,7 @@ public class TranslateController extends UtilitiesController implements Initiali
 
 
 
-
+    // !xử lí chọn NGÔN NGỮ SẼ ĐƯỢC DỊCH
     public void HandleBeTranslatedspeakButton() throws Exception{
         //VoiceRSS.Voice = UKVoice;
         String BeTranslatedText = BeTranslated.getText();
@@ -77,6 +78,7 @@ public class TranslateController extends UtilitiesController implements Initiali
         }
     }
 
+    // !xử lí chọn NGÔN NGỮ ĐƯỢC DỊCH RA
     public void HandleTranslatedFromspeakButton() throws Exception{
         //VoiceRSS.Voice = UKVoice;
         String TranslatedFromText = TranslatedFrom.getText();
@@ -128,6 +130,9 @@ public class TranslateController extends UtilitiesController implements Initiali
 //    }
 
 
+
+
+    // ! XỬ LÍ DỊCH
     public void translateButtonClicked() {
         String langFrom = LanguageBeTranslated.getValue(); // Ngôn ngữ nguồn
         String langTo = LanguageTranslateFrom.getValue(); // Ngôn ngữ đích
@@ -143,11 +148,11 @@ public class TranslateController extends UtilitiesController implements Initiali
     }
 
 
-
-    public void initSearchListView() {
-        BeTranslated.clear();
-        TranslatedFrom.clear();
-    }
+    //!KHÔNG CẦN THIẾT
+//    public void initSearchListView() {
+//        BeTranslated.clear();
+//        TranslatedFrom.clear();
+//    }
 
 
 }
